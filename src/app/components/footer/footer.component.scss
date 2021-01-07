@@ -1,0 +1,89 @@
+.foot-1 {
+  width: 100%;
+  background: #7D939D;
+  padding: 25px 0 15px;
+  .address {
+    display: block;
+    color: #fff;
+  }
+  .rrss {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    color: #fff;
+    height: 100%;
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 0 15px;
+      img {
+        height: 30px;
+        width: 30px;
+      }
+      span {
+        font-size: .7rem;
+      }
+    }
+  }
+}
+
+.cna {
+  display: flex;
+  justify-content: flex-end;
+  img {
+    height: 75px;
+  }
+}
+
+.foot-2 {
+  background: #5D7380;
+  padding: 15px 0;
+  img {
+    max-height: 60px;
+  }
+}
+.foot-3 {
+  background: #B1B1B1;
+  padding: 0 0 10px;
+  display: flex;
+  justify-content: center;
+  img {
+    height: 80px;
+    margin: 0 10px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .foot-1 {
+    .rrss {
+      justify-content: center;
+      align-items: center;
+      padding-top: 20px;
+    }
+  }
+  .cna {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .foot-1 {
+    padding: 20px 0 15px;
+    .address {
+      font-size: .80rem;
+      line-height: 1.2;
+    }
+
+    .rrss {
+      justify-content: center;
+      align-items: center;
+      padding-top: 20px;
+    }
+  }
+  .cna {
+    img {
+      height: 40px;
+    }
+  }
+}

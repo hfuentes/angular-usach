@@ -1,0 +1,68 @@
+<div class="header">
+  <div class="orange-bar-lg"></div>
+  <div class="upper">
+    <div class="container orange-bar d-none d-lg-block"></div>
+  </div>
+  <div class="middle">
+    <div class="container">
+      <div class="logo">
+        <img src="https://www.usach.cl/sites/default/files/logo_usach.jpg">
+      </div>
+      <div class="search">
+        <div class="languages">
+          <img src="../../../assets/spanish.png">
+          <img src="../../../assets/english.png">
+        </div>
+        <div class="search-input-group d-none d-lg-block">
+          <input class="search-input">
+          <button class="input-button">
+            <svg width="15px" height="15px" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M10.442 10.442a1 1 0 0 1 1.415 0l3.85 3.85a1 1 0 0 1-1.414 1.415l-3.85-3.85a1 1 0 0 1 0-1.415z"/>
+              <path fill-rule="evenodd" d="M6.5 12a5.5 5.5 0 1 0 0-11 5.5 5.5 0 0 0 0 11zM13 6.5a6.5 6.5 0 1 1-13 0 6.5 6.5 0 0 1 13 0z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="nav-md d-lg-none" (click)="openNav()">
+    <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-list" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+    </svg>
+   </div>
+  <div class="nav" [ngClass]="{'open': isNavOpen}">
+    <div class="container">
+      <!-- repeat -->
+      <a class="nav-element" routerLink="/" routerLinkActive="active" (click)="isNavOpen = false">
+        <div class="element-name">
+          Inicio
+        </div>
+      </a>
+      <a class="nav-element" routerLink="/noticias" routerLinkActive="active" (click)="isNavOpen = false">
+        <div class="element-name">
+          Noticias
+        </div>
+      </a>
+      <a class="nav-element" routerLink="/programa/descripcion" routerLinkActive="active" (click)="isNavOpen = false">
+        <div class="element-name">
+          Presentación del programa
+        </div>
+      </a>
+      <a class="nav-element" routerLink="/admision/fechas" routerLinkActive="active" (click)="isNavOpen = false">
+        <div class="element-name">
+          Admisión
+        </div>
+      </a>
+      <a class="nav-element" routerLink="/cuerpo-academico" routerLinkActive="active" (click)="isNavOpen = false">
+        <div class="element-name">
+          Cuerpo acádemico
+        </div>
+      </a>
+      <a class="nav-element" routerLink="/estudiantes/graduados" routerLinkActive="active" (click)="isNavOpen = false">
+        <div class="element-name">
+          Estudiantes del programa
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

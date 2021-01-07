@@ -1,0 +1,62 @@
+
+<div class="program-banner">
+  <img class="banner" src="../../../assets/program-banner.jpg">
+  <div class="title-container">
+    <div class="container">
+      <span>Admisión</span>
+    </div>
+  </div><!-- 
+  <div class="mobile-download-info d-block d-lg-none">
+    <img src="../../../assets/pdf.png">
+  </div> -->
+</div>
+<div class="program-content">
+  <div class="container pb-4">
+    <div class="row">
+      <div class="col-12 col-lg-3 px-4">
+        <button class="navigation-btn" (click)="goToNav('fechas')" [ngClass]="{'active': activeSection === 'fechas'}">
+          Fechas del proceso de admisión
+        </button>
+        <div class="d-lg-none mobile-active-content" [ngClass]="{'active': activeSection === 'fechas'}">
+          <div class="py-3">
+            {{activeContent}}
+          </div>
+        </div>
+        <button class="navigation-btn" (click)="goToNav('requisitos')" [ngClass]="{'active': activeSection === 'requisitos'}">
+          Requisitos para postular
+        </button>
+        <div class="d-lg-none mobile-active-content" [ngClass]="{'active': activeSection === 'requisitos'}">
+          <div class="py-3">
+            {{activeContent}}
+          </div>
+        </div>
+        <button class="navigation-btn" (click)="goToNav('becas')" [ngClass]="{'active': activeSection === 'becas'}">
+          Becas y descuentos
+        </button>
+        <div class="d-lg-none mobile-active-content" [ngClass]="{'active': activeSection === 'becas'}">
+          <div class="py-3">
+            {{activeContent}}
+          </div>
+        </div>
+        <button class="navigation-btn" (click)="goToNav('postula')" [ngClass]="{'active': activeSection === 'postula'}">
+          Postula
+        </button>
+        <div class="d-lg-none mobile-active-content" [ngClass]="{'active': activeSection === 'postula'}">
+          <div class="py-3">
+            {{activeContent}}
+          </div>
+        </div>
+        <!-- <div class="download-info d-none d-lg-flex">
+          <img src="../../../assets/pdf.png">
+        </div> -->
+      </div>
+      <div class="col-6 d-none d-lg-block border-left px-4">
+        <div class="active-content">
+          <div>
+            {{activeContent}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,50 @@
+.image-with-text {
+  width: 100%;
+  background: #E9E9E9;
+  border: 2px solid #ccc;
+  padding: 15px 10px;
+  cursor: pointer;
+  img {
+    width: 100%;
+  }
+  span {
+    display: block;
+    text-transform: uppercase;
+    font-size: .75rem;
+    text-align: center;
+    line-height: 1.2;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .image-with-text {
+    padding: 10px;
+    span {
+      font-size: .7rem;
+      line-height: 1;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .image-with-text {
+    background: none;
+    border: none;
+    padding: 20px;
+    span {
+      font-size: 1.3rem;
+      text-align: left;
+      line-height: 1.4;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .image-with-text {
+    padding: 15px;
+    span {
+      font-size: 1rem;
+      line-height: 1.2;
+    }
+  }
+}

@@ -1,0 +1,151 @@
+
+<div class="program-banner">
+  <img class="banner" src="../../../assets/program-banner.jpg">
+  <div class="title-container">
+    <div class="container">
+      <span>PRESENTACIÓN DEL PROGRAMA</span>
+    </div>
+  </div>
+  <div class="mobile-download-info d-block d-lg-none">
+    <img src="../../../assets/pdf.png">
+  </div>
+</div>
+<div class="program-content">
+  <div class="container pb-4">
+    <div class="row">
+      <div class="col-12 col-lg-3 px-4">
+        <button class="navigation-btn" (click)="goToNav('descripcion')" [ngClass]="{'active': activeSection === 'descripcion'}">
+          Descripción del Programa
+        </button>
+        <div class="d-lg-none mobile-active-content" [ngClass]="{'active': activeSection === 'descripcion'}">
+          <div class="py-3">
+            {{activeContent}}
+          </div>
+        </div>
+        <button class="navigation-btn" (click)="goToNav('objetivos')" [ngClass]="{'active': activeSection === 'objetivos'}">
+          Objetivos del Programa
+        </button>
+        <div class="d-lg-none mobile-active-content" [ngClass]="{'active': activeSection === 'objetivos'}">
+          <div class="py-3">
+            {{activeContent}}
+          </div>
+        </div>
+        <button class="navigation-btn" (click)="goToNav('dirigido-a')" [ngClass]="{'active': activeSection === 'dirigido-a'}">
+          Dirigido a
+        </button>
+        <div class="d-lg-none mobile-active-content" [ngClass]="{'active': activeSection === 'dirigido-a'}">
+          <div class="py-3">
+            {{activeContent}}
+          </div>
+        </div>
+        <button class="navigation-btn" (click)="goToNav('plan')" [ngClass]="{'active': activeSection === 'plan'}">
+          Plan de Estudios / Malla curricular
+        </button>
+        <div class="d-lg-none mobile-active-content" [ngClass]="{'active': activeSection === 'plan'}">
+          <div class="py-3">
+            {{activeContent}}
+          </div>
+        </div>
+        <button class="navigation-btn" (click)="goToNav('acreditacion')" [ngClass]="{'active': activeSection === 'acreditacion'}">
+          Acreditación
+        </button>
+        <div class="d-lg-none mobile-active-content" [ngClass]="{'active': activeSection === 'acreditacion'}">
+          <div class="py-3">
+            {{activeContent}}
+          </div>
+        </div>
+        <button class="navigation-btn" (click)="goToNav('investigacion')" [ngClass]="{'active': activeSection === 'investigacion'}">
+          Líneas de investigación
+        </button>
+        <div class="d-lg-none mobile-active-content" [ngClass]="{'active': activeSection === 'investigacion'}">
+          <div class="py-3">
+            {{activeContent}}
+          </div>
+        </div>
+        <div class="download-info d-none d-lg-flex">
+          <img src="../../../assets/pdf.png">
+        </div>
+      </div>
+      <div class="col-6 d-none d-lg-block border-left px-4">
+        <div class="active-content">
+          <div>
+            {{activeContent}}
+          </div>
+        </div>
+      </div>
+      <div class="col-3 d-none d-lg-block">
+        <div class="amenities gray-1 flex-column align-items-center justify-content-center">
+          <div class="text-uppercase blue-txt font-weight-normal font-big">Contacte con:</div>
+          <div class="text-uppercase orange-txt font-medium font-weight-bold">Pedro erices</div>
+          <div class="mt-3 d-flex align-items-center justify-content-center">
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-telephone-fill black-txt" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M2.267.98a1.636 1.636 0 0 1 2.448.152l1.681 2.162c.309.396.418.913.296 1.4l-.513 2.053a.636.636 0 0 0 .167.604L8.65 9.654a.636.636 0 0 0 .604.167l2.052-.513a1.636 1.636 0 0 1 1.401.296l2.162 1.681c.777.604.849 1.753.153 2.448l-.97.97c-.693.693-1.73.998-2.697.658a17.47 17.47 0 0 1-6.571-4.144A17.47 17.47 0 0 1 .639 4.646c-.34-.967-.035-2.004.658-2.698l.97-.969z"/>
+            </svg>
+            <span class="text-uppercase black-txt font-small ml-2">227180793</span>
+          </div>
+          <div class="d-flex align-items-center justify-content-center">
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-globe black-txt" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855A7.97 7.97 0 0 0 5.145 4H7.5V1.077zM4.09 4H2.255a7.025 7.025 0 0 1 3.072-2.472 6.7 6.7 0 0 0-.597.933c-.247.464-.462.98-.64 1.539zm-.582 3.5h-2.49c.062-.89.291-1.733.656-2.5H3.82a13.652 13.652 0 0 0-.312 2.5zM4.847 5H7.5v2.5H4.51A12.5 12.5 0 0 1 4.846 5zM8.5 5v2.5h2.99a12.495 12.495 0 0 0-.337-2.5H8.5zM4.51 8.5H7.5V11H4.847a12.5 12.5 0 0 1-.338-2.5zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5H8.5zM5.145 12H7.5v2.923c-.67-.204-1.335-.82-1.887-1.855A7.97 7.97 0 0 1 5.145 12zm.182 2.472a6.696 6.696 0 0 1-.597-.933A9.268 9.268 0 0 1 4.09 12H2.255a7.024 7.024 0 0 0 3.072 2.472zM3.82 11H1.674a6.958 6.958 0 0 1-.656-2.5h2.49c.03.877.138 1.718.312 2.5zm6.853 3.472A7.024 7.024 0 0 0 13.745 12H11.91a9.27 9.27 0 0 1-.64 1.539 6.688 6.688 0 0 1-.597.933zM8.5 12h2.355a7.967 7.967 0 0 1-.468 1.068c-.552 1.035-1.218 1.65-1.887 1.855V12zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.65 13.65 0 0 1-.312 2.5zm2.802-3.5h-2.49A13.65 13.65 0 0 0 12.18 5h2.146c.365.767.594 1.61.656 2.5zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7.024 7.024 0 0 0-3.072-2.472c.218.284.418.598.597.933zM10.855 4H8.5V1.077c.67.204 1.335.82 1.887 1.855.173.324.33.682.468 1.068z"/>
+            </svg>
+            <a class="text-uppercase font-small ml-2">ir al sitio</a>
+          </div>
+          <div class="mail-to mt-2">
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-envelope-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"/>
+            </svg>
+            <span class="ml-2">
+              enviar un mensaje
+            </span>
+          </div>
+        </div>
+        <div class="amenities gray-2 flex-wrap">
+          <!-- [ngClass]="{'pr-0': $even, 'pl-0': $even"}-->
+          <div class="col-6 pr-0 d-flex flex-column align-items-center justify-content-center">
+            <svg width="1.8em" height="1.8em" viewBox="0 0 16 16" class="bi bi-moon black-txt" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M14.53 10.53a7 7 0 0 1-9.058-9.058A7.003 7.003 0 0 0 8 15a7.002 7.002 0 0 0 6.53-4.47z"/>
+            </svg>
+            <span class="text-uppercase black-txt my-2 font-small">vespertina</span>
+          </div>
+          <div class="col-6 pl-0 d-flex flex-column align-items-center justify-content-center">
+            <svg width="1.8em" height="1.8em" viewBox="0 0 16 16" class="bi bi-moon black-txt" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M14.53 10.53a7 7 0 0 1-9.058-9.058A7.003 7.003 0 0 0 8 15a7.002 7.002 0 0 0 6.53-4.47z"/>
+            </svg>
+            <span class="text-uppercase black-txt my-2 font-small">vespertina</span>
+          </div>
+          <div class="col-6 pr-0 d-flex flex-column align-items-center justify-content-center">
+            <svg width="1.8em" height="1.8em" viewBox="0 0 16 16" class="bi bi-moon black-txt" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M14.53 10.53a7 7 0 0 1-9.058-9.058A7.003 7.003 0 0 0 8 15a7.002 7.002 0 0 0 6.53-4.47z"/>
+            </svg>
+            <span class="text-uppercase black-txt my-2 font-small">vespertina</span>
+          </div>
+          <div class="col-6 pl-0 d-flex flex-column align-items-center justify-content-center">
+            <svg width="1.8em" height="1.8em" viewBox="0 0 16 16" class="bi bi-moon black-txt" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M14.53 10.53a7 7 0 0 1-9.058-9.058A7.003 7.003 0 0 0 8 15a7.002 7.002 0 0 0 6.53-4.47z"/>
+            </svg>
+            <span class="text-uppercase black-txt my-2 font-small">vespertina</span>
+          </div>
+        </div>
+        <div class="amenities p-2 flex-column align-items-center gray-1">
+          <div class="text-uppercase orange-txt font-medium font-weight-bold">fechas 2020</div>
+          <div class="text-uppercase blue-txt font-medium font-weight-normal">versión</div>
+          <div class="version">
+            <span><span class="font-weight-bold">Postulaciones: </span> 22-11-2020 AL 22-12-2020</span>
+            <span><span class="font-weight-bold">Clases: </span> 22-11-2020 AL 22-12-2020</span>
+          </div>
+          <div class="text-uppercase orange-txt font-medium font-weight-bold mt-2">valor</div>
+          <div class="text-uppercase blue-txt font-weight-normal font-big lh-1">$3.000.000</div>
+          <div class="text-uppercase blue-txt font-weight-normal font-small">*60.000</div>
+        </div>
+        <div>
+          <div class="d-flex align-items-center justify-content-center mt-3">
+            <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-peace-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14 13.292A8 8 0 0 0 8.5.015v7.778l5.5 5.5zm-.708.708L8.5 9.206v6.778a7.967 7.967 0 0 0 4.792-1.986zM7.5 15.985V9.207L2.708 14A7.967 7.967 0 0 0 7.5 15.985zM2 13.292A8 8 0 0 1 7.5.015v7.778l-5.5 5.5z"/>
+            </svg>
+            <span class="blue-txt font-weight-normal font-small ml-2">Métodos de pago</span>
+          </div>
+          <div class="text-center orange-txt font-small font-weight-bold">Efectivo, cheques, tarjetas de crédito</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
