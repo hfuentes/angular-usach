@@ -8,6 +8,7 @@ import { AcademicComponent } from '../app/pages/academic/academic.component';
 import { StudentsComponent } from '../app/pages/students/students.component';
 import { ResearchComponent } from '../app/pages/research/research.component';
 import { NewsComponent } from './pages/news/news.component';
+import { AcademicDetailsComponent } from './pages/academic-details/academic-details.component';
 
 const routes: Routes = [
   {
@@ -41,6 +42,10 @@ const routes: Routes = [
   {
     path: 'noticias',
     component: NewsComponent
+  },
+  {
+    path: 'cuerpo-academico/:id',
+    component: AcademicDetailsComponent
   }
 ];
 

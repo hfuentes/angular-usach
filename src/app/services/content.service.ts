@@ -273,35 +273,221 @@ export class ContentService {
   };
 
   public academicsContent = [{
+    id: 1,
     name: 'Dr. César Huiliñir C.',
     position: 'Director del Programa',
     email: 'cesar.huilinir@usach.cl',
-    image: 'https://mma.ingenieria.usach.cl/sites/magister-medio-ambiente/files/styles/personas-normal/public/cesar_huilinir.jpg'
+    image: 'https://mma.ingenieria.usach.cl/sites/magister-medio-ambiente/files/styles/personas-normal/public/cesar_huilinir.jpg',
+    degrees: [{
+      title: 'Ingeniero Civil Químico',
+      content: 'Departamento de Ingeniería Química. Universidad de Santiago de Chile, (1992). Tesis: "Modelación dinámica de secadores rotatorios tubulares"',
+    }, {
+      title: 'Ph.D en Ingeniería Ambiental',
+      content: 'Department of Civil and Environmental Engineering, The University of Tennessee – Knoxville (UTK), The U.S. (2005). Thesis: "Health Risk Assessment Posed by the Mobile Source Air Toxics on an Urban to Regional Area."'
+    }, {
+      title: 'Minor in Statistics',
+      content: 'Department of Civil and Environmental Engineering, The University of Tennessee – Knoxville (UTK), The U.S. (2005).'
+    }],
+    papers: [
+      { content: 'Fidel Vallejo, Luis A. Díaz-Robles, Francisco Cubillos, Ricardo Vega, Jaime Gómez, Ernesto Pino-Cortés, Bastián Bascuñan, Paulina Carcamo, Francisca Parra, Ana Urzua, Samuel Carrasco; “Performance Evaluation of Biomass Blends with Additives Treated by Hydrothermal Carbonization”; Chemical Engineering Transactions, In Press, 2019.' },
+      { content: 'Alvaro Paul, Daniel Ortega-Videla, Diego Lucas Ocampo Bravo, Ernesto Pino-Cortes, Jaime Gomez, Felipe Scott, Patricio Moreno-Casas, Luis A. Diaz-Robles, Alberto Vergara; “Effect of Pellet Structure and Pelletization Temperature on the Performance of HTC Pellets.”, Fuel Processing Technology, Submitted 2019.' },
+      { content: 'Carrasco Samuel; Gómez, Jaime; Vallejo, Fidel; Díaz-Robles, Luis A.; Pino-Cortes, Ernesto; Campos, Valeria; Cubillos, Francisco; Pelz, Stefan K; Paczkowski, Sebastian; Silva, Javier; Cereceda-Balic, Francisco; Vergara-Fernández, Alberto; Lapuerta, Magin; Pazo, Amparo; Monedero, Esperanza; Fu, Joshua S; Hoekman, S. Kent; and Figueroa, Juan; “Experimental Study on Hydrothermal Carbonization of Lignocellulosic Biomass with Magnesium Chloride”; Journal of Cleaner Production; Submitted, 2019.' },
+      { content: 'Ernesto Pino-Cortes, Luis A. Díaz-Robles, Francisco Cubillos, Francisco Cereceda, Joshua Fu, Samuel Carrasco. "Black and organic carbon fraction of particulate matter exposed" ; Science of the Total Environment; Submitted, 2019' },
+      { content: 'Jaime Gómez, Giancarlo Corsi, Ernesto Pino-Cortés , Luis A. Díaz-Robles, Valeria Campos, Francisco Cubillos, Stefan K. Pelz, Sebastian Paczkowski, Samuel Carrasco, Javier Silva, Magín Lapuerta, Amparo Pozo , Esperanza Monedero; “Modeling and simulation of a continuous hydrothermal carbonization process”; Journal of Chemical Engineering Communications; Submitted, 2019.' },
+      { content: 'Constanza Corvalán, Luis A. Díaz-Robles*, Francisco Cubillos, Fidel Vallejo, Jaime Gómez, Ernesto Pino-Cortés, Stefan K. Pelz, Sebastian Paczkowski, Samuel Carrasco, Javier Silva, Magín Lapuerta, Francisco Cereceda-Balic, Amparo Pozo, Esperanza Monedero, “Life cycle analysis of hydrothermal carbonization of urban organic solid waste and comparison with gasification process”; Journal of Cleaner Production; Submitted, 2019.' },
+      { content: 'Alberto Vergara; Diana Yañez Sevilla; Paulina Morales; Felipe Scott; Germán Aroca; Luis Díaz-Robles; Patricio Moreno-Casas; “Biofiltration of benzo[a]pyrene, toluene and formaldehyde in air by a consortium of Rhodococcus erythropolis and Fusarium solani: effect of inlet loads, gas flow and temperature.” Chemical Engineering Journal, (ISI, Q1), Volume 332, 15 January 2018, Pages 702-710. https://doi.org/10.1016/j.cej.2017.09.095' },
+      { content: 'Victoria Knappe, Sebastian Paczkowski,, Julian Tejada, Luis Alonso Diaz Robles, Alain Gonzales, Stefan Pelz, “Low temperature microwave assisted hydrothermal carbonization (MAHC) reduces combustion emission precursors in short rotation coppice willow wood.”, Journal of Analytical and Applied Pyrolysis, Volume 134, September 2018, Pages 162-166' },
+      { content: 'Alberto Vergara; Diana Yañez Sevilla; Paulina Morales; Felipe Scott; Germán Aroca; Luis Díaz-Robles; Patricio Moreno-Casas; “Biofiltration of benzo[a]pyrene, toluene and formaldehyde in air by a consortium of Rhodococcus erythropolis and Fusarium solani: effect of inlet loads, gas flow and temperature.” Chemical Engineering Journal, (ISI, Q1), Volume 332, 15 January 2018, Pages 702-710. https://doi.org/10.1016/j.cej.2017.09.095' },
+      { content: 'Francisco Cereceda-Balic; Mario Toledo; Victor Vidal; Fabián Guerrero; Julio Acuña; Luis A. Díaz-Robles; Magin Lapuerta, “Emission Factors for PM2.5, CO, CO2, NOx, SO2 and particle size distributions from the combustion of wood species using a new controlled combustion chamber 3CE”, Science of the Total Environment, Volumes 584–585, 15 April 2017, Pages 901–910, (ISI, Q1).' }
+    ],
+    proyects: [
+      { content: 'Proyecto FONDEF I+D ID18I10182 (2018-2020). Investigación y optimización de la producción de pellets de alta densidad energética a través de la HTC de diferentes mezclas de lodos orgánicos industriales y residuos sólidos orgánicos urbanos, y su posterior gasificación para generar energía calórica. (Director del Proyecto).' },
+      { content: 'Proyecto FONDEF I+D ID18I10152 (2018-2020). Revalorización Energética de Residuos Sólidos de la Industria de la Celulosa Para la Fabricación de Pellets HTC. (Co-Investigador).' },
+      { content: 'Proyecto FNDR-CONAMA (2007-2008) Araucanía, Universidad Católica de Temuco, “Laboratorio para la Medición de Emisiones de Calefactores a Leña.” UCT-FNDR 30040008-0. (Director del Proyecto).' },
+      { content: 'Air Quality Initiative for the Great Smoky Mountains National Park. U.S. Environmental Protection Agency (EPA), University of Tennessee, (2002-2004).' },
+      { content: 'Proyecto DIUCT 2006-2-03, (2007-2009), Dirección de Investigación, Universidad Católica de Temuco, “Estudio de la dispersión, química, destino y transporte de contaminantes en los recursos aire y suelo basado en arquitectura Cluster Beowulf de alto rendimiento como herramienta para resolver problemas complejos de cálculo científico. (Director del Proyecto).' },
+      { content: 'Proyecto DIUCT (2007-2008), Dirección de Investigación, Universidad Católica de Temuco, “Estudio comparativo de la producción de etanol celulósico a partir de híbridos de álamos y eucalipto.” (Co-Investigador)' },
+    ]
   }, {
+    id: 2,
     name: 'Dr. Luis Díaz-Robles',
     position: 'Integrante Núcleo Académico',
     email: 'alonso.diaz.r@usach.cl',
-    image: 'https://mma.ingenieria.usach.cl/sites/magister-medio-ambiente/files/styles/personas-normal/public/luisdiaz.jpg'
+    image: 'https://mma.ingenieria.usach.cl/sites/magister-medio-ambiente/files/styles/personas-normal/public/luisdiaz.jpg',
+    degrees: [{
+      title: 'Ingeniero Civil Químico',
+      content: 'Departamento de Ingeniería Química. Universidad de Santiago de Chile, (1992). Tesis: "Modelación dinámica de secadores rotatorios tubulares"',
+    }, {
+      title: 'Ph.D en Ingeniería Ambiental',
+      content: 'Department of Civil and Environmental Engineering, The University of Tennessee – Knoxville (UTK), The U.S. (2005). Thesis: "Health Risk Assessment Posed by the Mobile Source Air Toxics on an Urban to Regional Area."'
+    }, {
+      title: 'Minor in Statistics',
+      content: 'Department of Civil and Environmental Engineering, The University of Tennessee – Knoxville (UTK), The U.S. (2005).'
+    }],
+    papers: [
+      { content: 'Fidel Vallejo, Luis A. Díaz-Robles, Francisco Cubillos, Ricardo Vega, Jaime Gómez, Ernesto Pino-Cortés, Bastián Bascuñan, Paulina Carcamo, Francisca Parra, Ana Urzua, Samuel Carrasco; “Performance Evaluation of Biomass Blends with Additives Treated by Hydrothermal Carbonization”; Chemical Engineering Transactions, In Press, 2019.' },
+      { content: 'Alvaro Paul, Daniel Ortega-Videla, Diego Lucas Ocampo Bravo, Ernesto Pino-Cortes, Jaime Gomez, Felipe Scott, Patricio Moreno-Casas, Luis A. Diaz-Robles, Alberto Vergara; “Effect of Pellet Structure and Pelletization Temperature on the Performance of HTC Pellets.”, Fuel Processing Technology, Submitted 2019.' },
+      { content: 'Carrasco Samuel; Gómez, Jaime; Vallejo, Fidel; Díaz-Robles, Luis A.; Pino-Cortes, Ernesto; Campos, Valeria; Cubillos, Francisco; Pelz, Stefan K; Paczkowski, Sebastian; Silva, Javier; Cereceda-Balic, Francisco; Vergara-Fernández, Alberto; Lapuerta, Magin; Pazo, Amparo; Monedero, Esperanza; Fu, Joshua S; Hoekman, S. Kent; and Figueroa, Juan; “Experimental Study on Hydrothermal Carbonization of Lignocellulosic Biomass with Magnesium Chloride”; Journal of Cleaner Production; Submitted, 2019.' },
+      { content: 'Ernesto Pino-Cortes, Luis A. Díaz-Robles, Francisco Cubillos, Francisco Cereceda, Joshua Fu, Samuel Carrasco. "Black and organic carbon fraction of particulate matter exposed" ; Science of the Total Environment; Submitted, 2019' },
+      { content: 'Jaime Gómez, Giancarlo Corsi, Ernesto Pino-Cortés , Luis A. Díaz-Robles, Valeria Campos, Francisco Cubillos, Stefan K. Pelz, Sebastian Paczkowski, Samuel Carrasco, Javier Silva, Magín Lapuerta, Amparo Pozo , Esperanza Monedero; “Modeling and simulation of a continuous hydrothermal carbonization process”; Journal of Chemical Engineering Communications; Submitted, 2019.' },
+      { content: 'Constanza Corvalán, Luis A. Díaz-Robles*, Francisco Cubillos, Fidel Vallejo, Jaime Gómez, Ernesto Pino-Cortés, Stefan K. Pelz, Sebastian Paczkowski, Samuel Carrasco, Javier Silva, Magín Lapuerta, Francisco Cereceda-Balic, Amparo Pozo, Esperanza Monedero, “Life cycle analysis of hydrothermal carbonization of urban organic solid waste and comparison with gasification process”; Journal of Cleaner Production; Submitted, 2019.' },
+      { content: 'Alberto Vergara; Diana Yañez Sevilla; Paulina Morales; Felipe Scott; Germán Aroca; Luis Díaz-Robles; Patricio Moreno-Casas; “Biofiltration of benzo[a]pyrene, toluene and formaldehyde in air by a consortium of Rhodococcus erythropolis and Fusarium solani: effect of inlet loads, gas flow and temperature.” Chemical Engineering Journal, (ISI, Q1), Volume 332, 15 January 2018, Pages 702-710. https://doi.org/10.1016/j.cej.2017.09.095' },
+      { content: 'Victoria Knappe, Sebastian Paczkowski,, Julian Tejada, Luis Alonso Diaz Robles, Alain Gonzales, Stefan Pelz, “Low temperature microwave assisted hydrothermal carbonization (MAHC) reduces combustion emission precursors in short rotation coppice willow wood.”, Journal of Analytical and Applied Pyrolysis, Volume 134, September 2018, Pages 162-166' },
+      { content: 'Alberto Vergara; Diana Yañez Sevilla; Paulina Morales; Felipe Scott; Germán Aroca; Luis Díaz-Robles; Patricio Moreno-Casas; “Biofiltration of benzo[a]pyrene, toluene and formaldehyde in air by a consortium of Rhodococcus erythropolis and Fusarium solani: effect of inlet loads, gas flow and temperature.” Chemical Engineering Journal, (ISI, Q1), Volume 332, 15 January 2018, Pages 702-710. https://doi.org/10.1016/j.cej.2017.09.095' },
+      { content: 'Francisco Cereceda-Balic; Mario Toledo; Victor Vidal; Fabián Guerrero; Julio Acuña; Luis A. Díaz-Robles; Magin Lapuerta, “Emission Factors for PM2.5, CO, CO2, NOx, SO2 and particle size distributions from the combustion of wood species using a new controlled combustion chamber 3CE”, Science of the Total Environment, Volumes 584–585, 15 April 2017, Pages 901–910, (ISI, Q1).' }
+    ],
+    proyects: [
+      { content: 'Proyecto FONDEF I+D ID18I10182 (2018-2020). Investigación y optimización de la producción de pellets de alta densidad energética a través de la HTC de diferentes mezclas de lodos orgánicos industriales y residuos sólidos orgánicos urbanos, y su posterior gasificación para generar energía calórica. (Director del Proyecto).' },
+      { content: 'Proyecto FONDEF I+D ID18I10152 (2018-2020). Revalorización Energética de Residuos Sólidos de la Industria de la Celulosa Para la Fabricación de Pellets HTC. (Co-Investigador).' },
+      { content: 'Proyecto FNDR-CONAMA (2007-2008) Araucanía, Universidad Católica de Temuco, “Laboratorio para la Medición de Emisiones de Calefactores a Leña.” UCT-FNDR 30040008-0. (Director del Proyecto).' },
+      { content: 'Air Quality Initiative for the Great Smoky Mountains National Park. U.S. Environmental Protection Agency (EPA), University of Tennessee, (2002-2004).' },
+      { content: 'Proyecto DIUCT 2006-2-03, (2007-2009), Dirección de Investigación, Universidad Católica de Temuco, “Estudio de la dispersión, química, destino y transporte de contaminantes en los recursos aire y suelo basado en arquitectura Cluster Beowulf de alto rendimiento como herramienta para resolver problemas complejos de cálculo científico. (Director del Proyecto).' },
+      { content: 'Proyecto DIUCT (2007-2008), Dirección de Investigación, Universidad Católica de Temuco, “Estudio comparativo de la producción de etanol celulósico a partir de híbridos de álamos y eucalipto.” (Co-Investigador)' },
+    ]
   }, {
+    id: 3,
     name: 'Dra. Luisa Sepúlveda',
     position: 'Integrante Núcleo Académico',
     email: 'luisa.sepulveda@usach.cl',
-    image: 'https://mma.ingenieria.usach.cl/sites/magister-medio-ambiente/files/styles/personas-normal/public/luisa_sepulveda.jpg'
+    image: 'https://mma.ingenieria.usach.cl/sites/magister-medio-ambiente/files/styles/personas-normal/public/luisa_sepulveda.jpg',
+    degrees: [{
+      title: 'Ingeniero Civil Químico',
+      content: 'Departamento de Ingeniería Química. Universidad de Santiago de Chile, (1992). Tesis: "Modelación dinámica de secadores rotatorios tubulares"',
+    }, {
+      title: 'Ph.D en Ingeniería Ambiental',
+      content: 'Department of Civil and Environmental Engineering, The University of Tennessee – Knoxville (UTK), The U.S. (2005). Thesis: "Health Risk Assessment Posed by the Mobile Source Air Toxics on an Urban to Regional Area."'
+    }, {
+      title: 'Minor in Statistics',
+      content: 'Department of Civil and Environmental Engineering, The University of Tennessee – Knoxville (UTK), The U.S. (2005).'
+    }],
+    papers: [
+      { content: 'Fidel Vallejo, Luis A. Díaz-Robles, Francisco Cubillos, Ricardo Vega, Jaime Gómez, Ernesto Pino-Cortés, Bastián Bascuñan, Paulina Carcamo, Francisca Parra, Ana Urzua, Samuel Carrasco; “Performance Evaluation of Biomass Blends with Additives Treated by Hydrothermal Carbonization”; Chemical Engineering Transactions, In Press, 2019.' },
+      { content: 'Alvaro Paul, Daniel Ortega-Videla, Diego Lucas Ocampo Bravo, Ernesto Pino-Cortes, Jaime Gomez, Felipe Scott, Patricio Moreno-Casas, Luis A. Diaz-Robles, Alberto Vergara; “Effect of Pellet Structure and Pelletization Temperature on the Performance of HTC Pellets.”, Fuel Processing Technology, Submitted 2019.' },
+      { content: 'Carrasco Samuel; Gómez, Jaime; Vallejo, Fidel; Díaz-Robles, Luis A.; Pino-Cortes, Ernesto; Campos, Valeria; Cubillos, Francisco; Pelz, Stefan K; Paczkowski, Sebastian; Silva, Javier; Cereceda-Balic, Francisco; Vergara-Fernández, Alberto; Lapuerta, Magin; Pazo, Amparo; Monedero, Esperanza; Fu, Joshua S; Hoekman, S. Kent; and Figueroa, Juan; “Experimental Study on Hydrothermal Carbonization of Lignocellulosic Biomass with Magnesium Chloride”; Journal of Cleaner Production; Submitted, 2019.' },
+      { content: 'Ernesto Pino-Cortes, Luis A. Díaz-Robles, Francisco Cubillos, Francisco Cereceda, Joshua Fu, Samuel Carrasco. "Black and organic carbon fraction of particulate matter exposed" ; Science of the Total Environment; Submitted, 2019' },
+      { content: 'Jaime Gómez, Giancarlo Corsi, Ernesto Pino-Cortés , Luis A. Díaz-Robles, Valeria Campos, Francisco Cubillos, Stefan K. Pelz, Sebastian Paczkowski, Samuel Carrasco, Javier Silva, Magín Lapuerta, Amparo Pozo , Esperanza Monedero; “Modeling and simulation of a continuous hydrothermal carbonization process”; Journal of Chemical Engineering Communications; Submitted, 2019.' },
+      { content: 'Constanza Corvalán, Luis A. Díaz-Robles*, Francisco Cubillos, Fidel Vallejo, Jaime Gómez, Ernesto Pino-Cortés, Stefan K. Pelz, Sebastian Paczkowski, Samuel Carrasco, Javier Silva, Magín Lapuerta, Francisco Cereceda-Balic, Amparo Pozo, Esperanza Monedero, “Life cycle analysis of hydrothermal carbonization of urban organic solid waste and comparison with gasification process”; Journal of Cleaner Production; Submitted, 2019.' },
+      { content: 'Alberto Vergara; Diana Yañez Sevilla; Paulina Morales; Felipe Scott; Germán Aroca; Luis Díaz-Robles; Patricio Moreno-Casas; “Biofiltration of benzo[a]pyrene, toluene and formaldehyde in air by a consortium of Rhodococcus erythropolis and Fusarium solani: effect of inlet loads, gas flow and temperature.” Chemical Engineering Journal, (ISI, Q1), Volume 332, 15 January 2018, Pages 702-710. https://doi.org/10.1016/j.cej.2017.09.095' },
+      { content: 'Victoria Knappe, Sebastian Paczkowski,, Julian Tejada, Luis Alonso Diaz Robles, Alain Gonzales, Stefan Pelz, “Low temperature microwave assisted hydrothermal carbonization (MAHC) reduces combustion emission precursors in short rotation coppice willow wood.”, Journal of Analytical and Applied Pyrolysis, Volume 134, September 2018, Pages 162-166' },
+      { content: 'Alberto Vergara; Diana Yañez Sevilla; Paulina Morales; Felipe Scott; Germán Aroca; Luis Díaz-Robles; Patricio Moreno-Casas; “Biofiltration of benzo[a]pyrene, toluene and formaldehyde in air by a consortium of Rhodococcus erythropolis and Fusarium solani: effect of inlet loads, gas flow and temperature.” Chemical Engineering Journal, (ISI, Q1), Volume 332, 15 January 2018, Pages 702-710. https://doi.org/10.1016/j.cej.2017.09.095' },
+      { content: 'Francisco Cereceda-Balic; Mario Toledo; Victor Vidal; Fabián Guerrero; Julio Acuña; Luis A. Díaz-Robles; Magin Lapuerta, “Emission Factors for PM2.5, CO, CO2, NOx, SO2 and particle size distributions from the combustion of wood species using a new controlled combustion chamber 3CE”, Science of the Total Environment, Volumes 584–585, 15 April 2017, Pages 901–910, (ISI, Q1).' }
+    ],
+    proyects: [
+      { content: 'Proyecto FONDEF I+D ID18I10182 (2018-2020). Investigación y optimización de la producción de pellets de alta densidad energética a través de la HTC de diferentes mezclas de lodos orgánicos industriales y residuos sólidos orgánicos urbanos, y su posterior gasificación para generar energía calórica. (Director del Proyecto).' },
+      { content: 'Proyecto FONDEF I+D ID18I10152 (2018-2020). Revalorización Energética de Residuos Sólidos de la Industria de la Celulosa Para la Fabricación de Pellets HTC. (Co-Investigador).' },
+      { content: 'Proyecto FNDR-CONAMA (2007-2008) Araucanía, Universidad Católica de Temuco, “Laboratorio para la Medición de Emisiones de Calefactores a Leña.” UCT-FNDR 30040008-0. (Director del Proyecto).' },
+      { content: 'Air Quality Initiative for the Great Smoky Mountains National Park. U.S. Environmental Protection Agency (EPA), University of Tennessee, (2002-2004).' },
+      { content: 'Proyecto DIUCT 2006-2-03, (2007-2009), Dirección de Investigación, Universidad Católica de Temuco, “Estudio de la dispersión, química, destino y transporte de contaminantes en los recursos aire y suelo basado en arquitectura Cluster Beowulf de alto rendimiento como herramienta para resolver problemas complejos de cálculo científico. (Director del Proyecto).' },
+      { content: 'Proyecto DIUCT (2007-2008), Dirección de Investigación, Universidad Católica de Temuco, “Estudio comparativo de la producción de etanol celulósico a partir de híbridos de álamos y eucalipto.” (Co-Investigador)' },
+    ]
   }, {
+    id: 4,
     name: 'René Garrido',
     position: 'Integrante Núcleo Académico',
     email: 'rene.garridol@usach.cl',
-    image: 'https://mma.ingenieria.usach.cl/sites/magister-medio-ambiente/files/styles/personas-normal/public/rene_garrido.jpg'
+    image: 'https://mma.ingenieria.usach.cl/sites/magister-medio-ambiente/files/styles/personas-normal/public/rene_garrido.jpg',
+    degrees: [{
+      title: 'Ingeniero Civil Químico',
+      content: 'Departamento de Ingeniería Química. Universidad de Santiago de Chile, (1992). Tesis: "Modelación dinámica de secadores rotatorios tubulares"',
+    }, {
+      title: 'Ph.D en Ingeniería Ambiental',
+      content: 'Department of Civil and Environmental Engineering, The University of Tennessee – Knoxville (UTK), The U.S. (2005). Thesis: "Health Risk Assessment Posed by the Mobile Source Air Toxics on an Urban to Regional Area."'
+    }, {
+      title: 'Minor in Statistics',
+      content: 'Department of Civil and Environmental Engineering, The University of Tennessee – Knoxville (UTK), The U.S. (2005).'
+    }],
+    papers: [
+      { content: 'Fidel Vallejo, Luis A. Díaz-Robles, Francisco Cubillos, Ricardo Vega, Jaime Gómez, Ernesto Pino-Cortés, Bastián Bascuñan, Paulina Carcamo, Francisca Parra, Ana Urzua, Samuel Carrasco; “Performance Evaluation of Biomass Blends with Additives Treated by Hydrothermal Carbonization”; Chemical Engineering Transactions, In Press, 2019.' },
+      { content: 'Alvaro Paul, Daniel Ortega-Videla, Diego Lucas Ocampo Bravo, Ernesto Pino-Cortes, Jaime Gomez, Felipe Scott, Patricio Moreno-Casas, Luis A. Diaz-Robles, Alberto Vergara; “Effect of Pellet Structure and Pelletization Temperature on the Performance of HTC Pellets.”, Fuel Processing Technology, Submitted 2019.' },
+      { content: 'Carrasco Samuel; Gómez, Jaime; Vallejo, Fidel; Díaz-Robles, Luis A.; Pino-Cortes, Ernesto; Campos, Valeria; Cubillos, Francisco; Pelz, Stefan K; Paczkowski, Sebastian; Silva, Javier; Cereceda-Balic, Francisco; Vergara-Fernández, Alberto; Lapuerta, Magin; Pazo, Amparo; Monedero, Esperanza; Fu, Joshua S; Hoekman, S. Kent; and Figueroa, Juan; “Experimental Study on Hydrothermal Carbonization of Lignocellulosic Biomass with Magnesium Chloride”; Journal of Cleaner Production; Submitted, 2019.' },
+      { content: 'Ernesto Pino-Cortes, Luis A. Díaz-Robles, Francisco Cubillos, Francisco Cereceda, Joshua Fu, Samuel Carrasco. "Black and organic carbon fraction of particulate matter exposed" ; Science of the Total Environment; Submitted, 2019' },
+      { content: 'Jaime Gómez, Giancarlo Corsi, Ernesto Pino-Cortés , Luis A. Díaz-Robles, Valeria Campos, Francisco Cubillos, Stefan K. Pelz, Sebastian Paczkowski, Samuel Carrasco, Javier Silva, Magín Lapuerta, Amparo Pozo , Esperanza Monedero; “Modeling and simulation of a continuous hydrothermal carbonization process”; Journal of Chemical Engineering Communications; Submitted, 2019.' },
+      { content: 'Constanza Corvalán, Luis A. Díaz-Robles*, Francisco Cubillos, Fidel Vallejo, Jaime Gómez, Ernesto Pino-Cortés, Stefan K. Pelz, Sebastian Paczkowski, Samuel Carrasco, Javier Silva, Magín Lapuerta, Francisco Cereceda-Balic, Amparo Pozo, Esperanza Monedero, “Life cycle analysis of hydrothermal carbonization of urban organic solid waste and comparison with gasification process”; Journal of Cleaner Production; Submitted, 2019.' },
+      { content: 'Alberto Vergara; Diana Yañez Sevilla; Paulina Morales; Felipe Scott; Germán Aroca; Luis Díaz-Robles; Patricio Moreno-Casas; “Biofiltration of benzo[a]pyrene, toluene and formaldehyde in air by a consortium of Rhodococcus erythropolis and Fusarium solani: effect of inlet loads, gas flow and temperature.” Chemical Engineering Journal, (ISI, Q1), Volume 332, 15 January 2018, Pages 702-710. https://doi.org/10.1016/j.cej.2017.09.095' },
+      { content: 'Victoria Knappe, Sebastian Paczkowski,, Julian Tejada, Luis Alonso Diaz Robles, Alain Gonzales, Stefan Pelz, “Low temperature microwave assisted hydrothermal carbonization (MAHC) reduces combustion emission precursors in short rotation coppice willow wood.”, Journal of Analytical and Applied Pyrolysis, Volume 134, September 2018, Pages 162-166' },
+      { content: 'Alberto Vergara; Diana Yañez Sevilla; Paulina Morales; Felipe Scott; Germán Aroca; Luis Díaz-Robles; Patricio Moreno-Casas; “Biofiltration of benzo[a]pyrene, toluene and formaldehyde in air by a consortium of Rhodococcus erythropolis and Fusarium solani: effect of inlet loads, gas flow and temperature.” Chemical Engineering Journal, (ISI, Q1), Volume 332, 15 January 2018, Pages 702-710. https://doi.org/10.1016/j.cej.2017.09.095' },
+      { content: 'Francisco Cereceda-Balic; Mario Toledo; Victor Vidal; Fabián Guerrero; Julio Acuña; Luis A. Díaz-Robles; Magin Lapuerta, “Emission Factors for PM2.5, CO, CO2, NOx, SO2 and particle size distributions from the combustion of wood species using a new controlled combustion chamber 3CE”, Science of the Total Environment, Volumes 584–585, 15 April 2017, Pages 901–910, (ISI, Q1).' }
+    ],
+    proyects: [
+      { content: 'Proyecto FONDEF I+D ID18I10182 (2018-2020). Investigación y optimización de la producción de pellets de alta densidad energética a través de la HTC de diferentes mezclas de lodos orgánicos industriales y residuos sólidos orgánicos urbanos, y su posterior gasificación para generar energía calórica. (Director del Proyecto).' },
+      { content: 'Proyecto FONDEF I+D ID18I10152 (2018-2020). Revalorización Energética de Residuos Sólidos de la Industria de la Celulosa Para la Fabricación de Pellets HTC. (Co-Investigador).' },
+      { content: 'Proyecto FNDR-CONAMA (2007-2008) Araucanía, Universidad Católica de Temuco, “Laboratorio para la Medición de Emisiones de Calefactores a Leña.” UCT-FNDR 30040008-0. (Director del Proyecto).' },
+      { content: 'Air Quality Initiative for the Great Smoky Mountains National Park. U.S. Environmental Protection Agency (EPA), University of Tennessee, (2002-2004).' },
+      { content: 'Proyecto DIUCT 2006-2-03, (2007-2009), Dirección de Investigación, Universidad Católica de Temuco, “Estudio de la dispersión, química, destino y transporte de contaminantes en los recursos aire y suelo basado en arquitectura Cluster Beowulf de alto rendimiento como herramienta para resolver problemas complejos de cálculo científico. (Director del Proyecto).' },
+      { content: 'Proyecto DIUCT (2007-2008), Dirección de Investigación, Universidad Católica de Temuco, “Estudio comparativo de la producción de etanol celulósico a partir de híbridos de álamos y eucalipto.” (Co-Investigador)' },
+    ]
   }, {
+    id: 5,
     name: 'Dr. Alejandro Reyes',
     position: 'Integrante Núcleo Académico',
     email: 'alejandro.reyes@usach.cl',
-    image: 'https://mma.ingenieria.usach.cl/sites/magister-medio-ambiente/files/styles/personas-normal/public/alejandroreyes.jpg'
+    image: 'https://mma.ingenieria.usach.cl/sites/magister-medio-ambiente/files/styles/personas-normal/public/alejandroreyes.jpg',
+    degrees: [{
+      title: 'Ingeniero Civil Químico',
+      content: 'Departamento de Ingeniería Química. Universidad de Santiago de Chile, (1992). Tesis: "Modelación dinámica de secadores rotatorios tubulares"',
+    }, {
+      title: 'Ph.D en Ingeniería Ambiental',
+      content: 'Department of Civil and Environmental Engineering, The University of Tennessee – Knoxville (UTK), The U.S. (2005). Thesis: "Health Risk Assessment Posed by the Mobile Source Air Toxics on an Urban to Regional Area."'
+    }, {
+      title: 'Minor in Statistics',
+      content: 'Department of Civil and Environmental Engineering, The University of Tennessee – Knoxville (UTK), The U.S. (2005).'
+    }],
+    papers: [
+      { content: 'Fidel Vallejo, Luis A. Díaz-Robles, Francisco Cubillos, Ricardo Vega, Jaime Gómez, Ernesto Pino-Cortés, Bastián Bascuñan, Paulina Carcamo, Francisca Parra, Ana Urzua, Samuel Carrasco; “Performance Evaluation of Biomass Blends with Additives Treated by Hydrothermal Carbonization”; Chemical Engineering Transactions, In Press, 2019.' },
+      { content: 'Alvaro Paul, Daniel Ortega-Videla, Diego Lucas Ocampo Bravo, Ernesto Pino-Cortes, Jaime Gomez, Felipe Scott, Patricio Moreno-Casas, Luis A. Diaz-Robles, Alberto Vergara; “Effect of Pellet Structure and Pelletization Temperature on the Performance of HTC Pellets.”, Fuel Processing Technology, Submitted 2019.' },
+      { content: 'Carrasco Samuel; Gómez, Jaime; Vallejo, Fidel; Díaz-Robles, Luis A.; Pino-Cortes, Ernesto; Campos, Valeria; Cubillos, Francisco; Pelz, Stefan K; Paczkowski, Sebastian; Silva, Javier; Cereceda-Balic, Francisco; Vergara-Fernández, Alberto; Lapuerta, Magin; Pazo, Amparo; Monedero, Esperanza; Fu, Joshua S; Hoekman, S. Kent; and Figueroa, Juan; “Experimental Study on Hydrothermal Carbonization of Lignocellulosic Biomass with Magnesium Chloride”; Journal of Cleaner Production; Submitted, 2019.' },
+      { content: 'Ernesto Pino-Cortes, Luis A. Díaz-Robles, Francisco Cubillos, Francisco Cereceda, Joshua Fu, Samuel Carrasco. "Black and organic carbon fraction of particulate matter exposed" ; Science of the Total Environment; Submitted, 2019' },
+      { content: 'Jaime Gómez, Giancarlo Corsi, Ernesto Pino-Cortés , Luis A. Díaz-Robles, Valeria Campos, Francisco Cubillos, Stefan K. Pelz, Sebastian Paczkowski, Samuel Carrasco, Javier Silva, Magín Lapuerta, Amparo Pozo , Esperanza Monedero; “Modeling and simulation of a continuous hydrothermal carbonization process”; Journal of Chemical Engineering Communications; Submitted, 2019.' },
+      { content: 'Constanza Corvalán, Luis A. Díaz-Robles*, Francisco Cubillos, Fidel Vallejo, Jaime Gómez, Ernesto Pino-Cortés, Stefan K. Pelz, Sebastian Paczkowski, Samuel Carrasco, Javier Silva, Magín Lapuerta, Francisco Cereceda-Balic, Amparo Pozo, Esperanza Monedero, “Life cycle analysis of hydrothermal carbonization of urban organic solid waste and comparison with gasification process”; Journal of Cleaner Production; Submitted, 2019.' },
+      { content: 'Alberto Vergara; Diana Yañez Sevilla; Paulina Morales; Felipe Scott; Germán Aroca; Luis Díaz-Robles; Patricio Moreno-Casas; “Biofiltration of benzo[a]pyrene, toluene and formaldehyde in air by a consortium of Rhodococcus erythropolis and Fusarium solani: effect of inlet loads, gas flow and temperature.” Chemical Engineering Journal, (ISI, Q1), Volume 332, 15 January 2018, Pages 702-710. https://doi.org/10.1016/j.cej.2017.09.095' },
+      { content: 'Victoria Knappe, Sebastian Paczkowski,, Julian Tejada, Luis Alonso Diaz Robles, Alain Gonzales, Stefan Pelz, “Low temperature microwave assisted hydrothermal carbonization (MAHC) reduces combustion emission precursors in short rotation coppice willow wood.”, Journal of Analytical and Applied Pyrolysis, Volume 134, September 2018, Pages 162-166' },
+      { content: 'Alberto Vergara; Diana Yañez Sevilla; Paulina Morales; Felipe Scott; Germán Aroca; Luis Díaz-Robles; Patricio Moreno-Casas; “Biofiltration of benzo[a]pyrene, toluene and formaldehyde in air by a consortium of Rhodococcus erythropolis and Fusarium solani: effect of inlet loads, gas flow and temperature.” Chemical Engineering Journal, (ISI, Q1), Volume 332, 15 January 2018, Pages 702-710. https://doi.org/10.1016/j.cej.2017.09.095' },
+      { content: 'Francisco Cereceda-Balic; Mario Toledo; Victor Vidal; Fabián Guerrero; Julio Acuña; Luis A. Díaz-Robles; Magin Lapuerta, “Emission Factors for PM2.5, CO, CO2, NOx, SO2 and particle size distributions from the combustion of wood species using a new controlled combustion chamber 3CE”, Science of the Total Environment, Volumes 584–585, 15 April 2017, Pages 901–910, (ISI, Q1).' }
+    ],
+    proyects: [
+      { content: 'Proyecto FONDEF I+D ID18I10182 (2018-2020). Investigación y optimización de la producción de pellets de alta densidad energética a través de la HTC de diferentes mezclas de lodos orgánicos industriales y residuos sólidos orgánicos urbanos, y su posterior gasificación para generar energía calórica. (Director del Proyecto).' },
+      { content: 'Proyecto FONDEF I+D ID18I10152 (2018-2020). Revalorización Energética de Residuos Sólidos de la Industria de la Celulosa Para la Fabricación de Pellets HTC. (Co-Investigador).' },
+      { content: 'Proyecto FNDR-CONAMA (2007-2008) Araucanía, Universidad Católica de Temuco, “Laboratorio para la Medición de Emisiones de Calefactores a Leña.” UCT-FNDR 30040008-0. (Director del Proyecto).' },
+      { content: 'Air Quality Initiative for the Great Smoky Mountains National Park. U.S. Environmental Protection Agency (EPA), University of Tennessee, (2002-2004).' },
+      { content: 'Proyecto DIUCT 2006-2-03, (2007-2009), Dirección de Investigación, Universidad Católica de Temuco, “Estudio de la dispersión, química, destino y transporte de contaminantes en los recursos aire y suelo basado en arquitectura Cluster Beowulf de alto rendimiento como herramienta para resolver problemas complejos de cálculo científico. (Director del Proyecto).' },
+      { content: 'Proyecto DIUCT (2007-2008), Dirección de Investigación, Universidad Católica de Temuco, “Estudio comparativo de la producción de etanol celulósico a partir de híbridos de álamos y eucalipto.” (Co-Investigador)' },
+    ]
   }, {
+    id: 6,
     name: 'José Luis Salazar',
     position: 'Integrante Núcleo Académico',
     email: '',
-    image: 'https://mma.ingenieria.usach.cl/sites/magister-medio-ambiente/files/styles/personas-normal/public/jls.jpg'
+    image: 'https://mma.ingenieria.usach.cl/sites/magister-medio-ambiente/files/styles/personas-normal/public/jls.jpg',
+    degrees: [{
+      title: 'Ingeniero Civil Químico',
+      content: 'Departamento de Ingeniería Química. Universidad de Santiago de Chile, (1992). Tesis: "Modelación dinámica de secadores rotatorios tubulares"',
+    }, {
+      title: 'Ph.D en Ingeniería Ambiental',
+      content: 'Department of Civil and Environmental Engineering, The University of Tennessee – Knoxville (UTK), The U.S. (2005). Thesis: "Health Risk Assessment Posed by the Mobile Source Air Toxics on an Urban to Regional Area."'
+    }, {
+      title: 'Minor in Statistics',
+      content: 'Department of Civil and Environmental Engineering, The University of Tennessee – Knoxville (UTK), The U.S. (2005).'
+    }],
+    papers: [
+      { content: 'Fidel Vallejo, Luis A. Díaz-Robles, Francisco Cubillos, Ricardo Vega, Jaime Gómez, Ernesto Pino-Cortés, Bastián Bascuñan, Paulina Carcamo, Francisca Parra, Ana Urzua, Samuel Carrasco; “Performance Evaluation of Biomass Blends with Additives Treated by Hydrothermal Carbonization”; Chemical Engineering Transactions, In Press, 2019.' },
+      { content: 'Alvaro Paul, Daniel Ortega-Videla, Diego Lucas Ocampo Bravo, Ernesto Pino-Cortes, Jaime Gomez, Felipe Scott, Patricio Moreno-Casas, Luis A. Diaz-Robles, Alberto Vergara; “Effect of Pellet Structure and Pelletization Temperature on the Performance of HTC Pellets.”, Fuel Processing Technology, Submitted 2019.' },
+      { content: 'Carrasco Samuel; Gómez, Jaime; Vallejo, Fidel; Díaz-Robles, Luis A.; Pino-Cortes, Ernesto; Campos, Valeria; Cubillos, Francisco; Pelz, Stefan K; Paczkowski, Sebastian; Silva, Javier; Cereceda-Balic, Francisco; Vergara-Fernández, Alberto; Lapuerta, Magin; Pazo, Amparo; Monedero, Esperanza; Fu, Joshua S; Hoekman, S. Kent; and Figueroa, Juan; “Experimental Study on Hydrothermal Carbonization of Lignocellulosic Biomass with Magnesium Chloride”; Journal of Cleaner Production; Submitted, 2019.' },
+      { content: 'Ernesto Pino-Cortes, Luis A. Díaz-Robles, Francisco Cubillos, Francisco Cereceda, Joshua Fu, Samuel Carrasco. "Black and organic carbon fraction of particulate matter exposed" ; Science of the Total Environment; Submitted, 2019' },
+      { content: 'Jaime Gómez, Giancarlo Corsi, Ernesto Pino-Cortés , Luis A. Díaz-Robles, Valeria Campos, Francisco Cubillos, Stefan K. Pelz, Sebastian Paczkowski, Samuel Carrasco, Javier Silva, Magín Lapuerta, Amparo Pozo , Esperanza Monedero; “Modeling and simulation of a continuous hydrothermal carbonization process”; Journal of Chemical Engineering Communications; Submitted, 2019.' },
+      { content: 'Constanza Corvalán, Luis A. Díaz-Robles*, Francisco Cubillos, Fidel Vallejo, Jaime Gómez, Ernesto Pino-Cortés, Stefan K. Pelz, Sebastian Paczkowski, Samuel Carrasco, Javier Silva, Magín Lapuerta, Francisco Cereceda-Balic, Amparo Pozo, Esperanza Monedero, “Life cycle analysis of hydrothermal carbonization of urban organic solid waste and comparison with gasification process”; Journal of Cleaner Production; Submitted, 2019.' },
+      { content: 'Alberto Vergara; Diana Yañez Sevilla; Paulina Morales; Felipe Scott; Germán Aroca; Luis Díaz-Robles; Patricio Moreno-Casas; “Biofiltration of benzo[a]pyrene, toluene and formaldehyde in air by a consortium of Rhodococcus erythropolis and Fusarium solani: effect of inlet loads, gas flow and temperature.” Chemical Engineering Journal, (ISI, Q1), Volume 332, 15 January 2018, Pages 702-710. https://doi.org/10.1016/j.cej.2017.09.095' },
+      { content: 'Victoria Knappe, Sebastian Paczkowski,, Julian Tejada, Luis Alonso Diaz Robles, Alain Gonzales, Stefan Pelz, “Low temperature microwave assisted hydrothermal carbonization (MAHC) reduces combustion emission precursors in short rotation coppice willow wood.”, Journal of Analytical and Applied Pyrolysis, Volume 134, September 2018, Pages 162-166' },
+      { content: 'Alberto Vergara; Diana Yañez Sevilla; Paulina Morales; Felipe Scott; Germán Aroca; Luis Díaz-Robles; Patricio Moreno-Casas; “Biofiltration of benzo[a]pyrene, toluene and formaldehyde in air by a consortium of Rhodococcus erythropolis and Fusarium solani: effect of inlet loads, gas flow and temperature.” Chemical Engineering Journal, (ISI, Q1), Volume 332, 15 January 2018, Pages 702-710. https://doi.org/10.1016/j.cej.2017.09.095' },
+      { content: 'Francisco Cereceda-Balic; Mario Toledo; Victor Vidal; Fabián Guerrero; Julio Acuña; Luis A. Díaz-Robles; Magin Lapuerta, “Emission Factors for PM2.5, CO, CO2, NOx, SO2 and particle size distributions from the combustion of wood species using a new controlled combustion chamber 3CE”, Science of the Total Environment, Volumes 584–585, 15 April 2017, Pages 901–910, (ISI, Q1).' }
+    ],
+    proyects: [
+      { content: 'Proyecto FONDEF I+D ID18I10182 (2018-2020). Investigación y optimización de la producción de pellets de alta densidad energética a través de la HTC de diferentes mezclas de lodos orgánicos industriales y residuos sólidos orgánicos urbanos, y su posterior gasificación para generar energía calórica. (Director del Proyecto).' },
+      { content: 'Proyecto FONDEF I+D ID18I10152 (2018-2020). Revalorización Energética de Residuos Sólidos de la Industria de la Celulosa Para la Fabricación de Pellets HTC. (Co-Investigador).' },
+      { content: 'Proyecto FNDR-CONAMA (2007-2008) Araucanía, Universidad Católica de Temuco, “Laboratorio para la Medición de Emisiones de Calefactores a Leña.” UCT-FNDR 30040008-0. (Director del Proyecto).' },
+      { content: 'Air Quality Initiative for the Great Smoky Mountains National Park. U.S. Environmental Protection Agency (EPA), University of Tennessee, (2002-2004).' },
+      { content: 'Proyecto DIUCT 2006-2-03, (2007-2009), Dirección de Investigación, Universidad Católica de Temuco, “Estudio de la dispersión, química, destino y transporte de contaminantes en los recursos aire y suelo basado en arquitectura Cluster Beowulf de alto rendimiento como herramienta para resolver problemas complejos de cálculo científico. (Director del Proyecto).' },
+      { content: 'Proyecto DIUCT (2007-2008), Dirección de Investigación, Universidad Católica de Temuco, “Estudio comparativo de la producción de etanol celulósico a partir de híbridos de álamos y eucalipto.” (Co-Investigador)' },
+    ]
   }];
 
   constructor() { }
@@ -338,5 +524,9 @@ export class ContentService {
   getAcademicsContent(limit: number): any {
     const l = this.academicsContent.length;
     return this.academicsContent.slice(limit > l ? 0 : l - limit, l);
+  }
+
+  getAcademicContent(id: number): any {
+    return this.academicsContent.find(x => x.id === id);
   }
 }
