@@ -7,6 +7,7 @@ import { ScholarshipComponent } from '../app/pages/scholarship/scholarship.compo
 import { AcademicComponent } from '../app/pages/academic/academic.component';
 import { StudentsComponent } from '../app/pages/students/students.component';
 import { ResearchComponent } from '../app/pages/research/research.component';
+import { NewsComponent } from './pages/news/news.component';
 
 const routes: Routes = [
   {
@@ -36,6 +37,10 @@ const routes: Routes = [
   {
     path: 'investigacion',
     component: ResearchComponent
+  },
+  {
+    path: 'noticias',
+    component: NewsComponent
   }
 ];
 

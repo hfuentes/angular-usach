@@ -17,6 +17,7 @@ import { ScholarshipComponent } from './pages/scholarship/scholarship.component'
 import { AcademicComponent } from './pages/academic/academic.component';
 import { StudentsComponent } from './pages/students/students.component';
 import { ResearchComponent } from './pages/research/research.component';
+import { NewsComponent } from './pages/news/news.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { ResearchComponent } from './pages/research/research.component';
     AcademicComponent,
     StudentsComponent,
     ResearchComponent,
+    NewsComponent,
   ],
   imports: [
     BrowserModule,
