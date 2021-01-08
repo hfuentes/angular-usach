@@ -3,7 +3,7 @@
   <img class="banner" src="../../../assets/program-banner.jpg">
   <div class="title-container">
     <div class="container">
-      <span>Admisión</span>
+      <span>Estudiantes del Programa</span>
     </div>
   </div>
   <!-- <div class="mobile-download-info d-block d-lg-none">
@@ -17,27 +17,45 @@
         <button class="navigation-btn" (click)="goToNav('graduados')" [ngClass]="{'active': activeSection === 'graduados'}">
           Listado de graduados
         </button>
-        <div class="d-lg-none mobile-active-content" [ngClass]="{'active': activeSection === 'graduados'}">
-          <div class="py-3">
-            {{activeContent}}
-          </div>
-        </div>
         <button class="navigation-btn" (click)="goToNav('tesis')" [ngClass]="{'active': activeSection === 'tesis'}">
           Tesis
         </button>
-        <div class="d-lg-none mobile-active-content" [ngClass]="{'active': activeSection === 'tesis'}">
-          <div class="py-3">
-            {{activeContent}}
-          </div>
-        </div>
-        <!-- <div class="download-info d-none d-lg-flex">
-          <img src="../../../assets/pdf.png">
-        </div> -->
       </div>
-      <div class="col-6 d-none d-lg-block border-left px-4">
+      <div class="col-12 col-lg-9 d-none d-lg-block border-left px-4">
         <div class="active-content">
-          <div>
-            {{activeContent}}
+          <div *ngIf="activeSection === 'graduados'">
+            <table class="table table-sm">
+              <thead>
+                <tr>
+                  <th scope="col">Nombre</th>
+                  <th scope="col">Año egreso</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let i of graduates">
+                  <td>{{ i.name }}</td>
+                  <td>{{ i.year }}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div *ngIf="activeSection === 'tesis'">
+            <table class="table table-sm">
+              <thead>
+                <tr>
+                  <th scope="col">Título</th>
+                  <th scope="col">Autor</th>
+                  <th scope="col">Año</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let i of thesis">
+                  <td>{{ i.title }}</td>
+                  <td>{{ i.author }}</td>
+                  <td>{{ i.year }}</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
