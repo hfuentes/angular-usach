@@ -19,7 +19,7 @@ export class ProgramComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private content: ContentService
-    ) { }
+  ) { }
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
@@ -27,7 +27,7 @@ export class ProgramComponent implements OnInit {
       console.log(this.route);
     });
     this.winWidth = this.winRef.nativeWindow.innerWidth;
-    this.activeContent = this.content.programContent[this.activeSection].content;
+    this.activeContent = this.content.getProgramContent(this.activeSection);
   }
 
   goToNav = (target) => {
@@ -37,8 +37,6 @@ export class ProgramComponent implements OnInit {
     } else {
       this.activeSection = this.activeSection !== target ? target : null;
     }
-    if (this.activeSection) {
-      this.activeContent = this.content.programContent[this.activeSection].content;
-    }
+    this.activeContent = this.content.getProgramContent(this.activeSection);
   }
 }
