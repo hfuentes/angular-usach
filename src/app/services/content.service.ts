@@ -272,7 +272,37 @@ export class ContentService {
     ]
   };
 
-  public academicsContent = [];
+  public academicsContent = [{
+    name: 'Dr. César Huiliñir C.',
+    position: 'Director del Programa',
+    email: 'cesar.huilinir@usach.cl',
+    image: 'https://mma.ingenieria.usach.cl/sites/magister-medio-ambiente/files/styles/personas-normal/public/cesar_huilinir.jpg'
+  }, {
+    name: 'Dr. Luis Díaz-Robles',
+    position: 'Integrante Núcleo Académico',
+    email: 'alonso.diaz.r@usach.cl',
+    image: 'https://mma.ingenieria.usach.cl/sites/magister-medio-ambiente/files/styles/personas-normal/public/luisdiaz.jpg'
+  }, {
+    name: 'Dra. Luisa Sepúlveda',
+    position: 'Integrante Núcleo Académico',
+    email: 'luisa.sepulveda@usach.cl',
+    image: 'https://mma.ingenieria.usach.cl/sites/magister-medio-ambiente/files/styles/personas-normal/public/luisa_sepulveda.jpg'
+  }, {
+    name: 'René Garrido',
+    position: 'Integrante Núcleo Académico',
+    email: 'rene.garridol@usach.cl',
+    image: 'https://mma.ingenieria.usach.cl/sites/magister-medio-ambiente/files/styles/personas-normal/public/rene_garrido.jpg'
+  }, {
+    name: 'Dr. Alejandro Reyes',
+    position: 'Integrante Núcleo Académico',
+    email: 'alejandro.reyes@usach.cl',
+    image: 'https://mma.ingenieria.usach.cl/sites/magister-medio-ambiente/files/styles/personas-normal/public/alejandroreyes.jpg'
+  }, {
+    name: 'José Luis Salazar',
+    position: 'Integrante Núcleo Académico',
+    email: '',
+    image: 'https://mma.ingenieria.usach.cl/sites/magister-medio-ambiente/files/styles/personas-normal/public/jls.jpg'
+  }];
 
   constructor() { }
 
