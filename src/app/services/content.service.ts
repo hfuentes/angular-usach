@@ -272,39 +272,41 @@ export class ContentService {
     ]
   };
 
+  public academicsContent = [];
+
   constructor() { }
 
   getProgramContent(key: string): any {
-    if (this.programContent[key]) {
-      return this.programContent[key].content;
-    }
-    return '';
+    return this.programContent[key] ? this.programContent[key].content : '';
   }
 
   getAdmissionContent(key: string): any {
-    if (this.admissionContent[key]) {
-      return this.admissionContent[key].content;
-    }
-    return '';
+    return this.admissionContent[key] ? this.admissionContent[key].content : '';
   }
 
   getNewsContent(limit: number): any {
-    return this.newsContent.slice(limit > this.newsContent.length ? 0 : this.newsContent.length - limit, this.newsContent.length);
+    const l = this.newsContent.length;
+    return this.newsContent.slice(limit > l ? 0 : l - limit, l);
   }
 
   getGraduatesContent(limit: number): any {
     this.studentsContent.graduates.sort((x, y) => {
       return y.year - x.year;
     });
-    return this.studentsContent.graduates.slice(limit > this.studentsContent.graduates.length ?
-      0 : this.studentsContent.graduates.length - limit, this.studentsContent.graduates.length);
+    const l = this.studentsContent.graduates.length;
+    return this.studentsContent.graduates.slice(limit > l ? 0 : l - limit, l);
   }
 
   getThesisContent(limit: number): any {
     this.studentsContent.thesis.sort((x, y) => {
       return y.year - x.year;
     });
-    return this.studentsContent.thesis.slice(limit > this.studentsContent.thesis.length ?
-      0 : this.studentsContent.thesis.length - limit, this.studentsContent.thesis.length);
+    const l = this.studentsContent.thesis.length;
+    return this.studentsContent.thesis.slice(limit > l ? 0 : l - limit, l);
+  }
+
+  getAcademicsContent(limit: number): any {
+    const l = this.academicsContent.length;
+    return this.academicsContent.slice(limit > l ? 0 : l - limit, l);
   }
 }

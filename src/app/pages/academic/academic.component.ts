@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { WindowRef } from '../../services/window.service';
+import { ContentService } from '../../services/content.service';
 
 @Component({
   selector: 'app-academic',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AcademicComponent implements OnInit {
 
-  constructor() { }
+  winWidth = null;
+  academics = null;
+
+  constructor(
+    private winRef: WindowRef,
+    private content: ContentService
+  ) { }
 
   ngOnInit(): void {
+    this.winWidth = this.winRef.nativeWindow.innerWidth;
+    this.academics = this.content.getAcademicsContent(10);
   }
 
 }
