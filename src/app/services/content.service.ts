@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class ContentService {
 
-  public programContent = {
+  programContent = {
     descripcion: {
       content: 'Descripción: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys  dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem.'
     },
@@ -26,7 +26,7 @@ export class ContentService {
     }
   };
 
-  public admissionContent = {
+  admissionContent = {
     fechas: {
       content: 'Fechas: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including of Lorem Ipsum.'
     },
@@ -41,7 +41,7 @@ export class ContentService {
     }
   };
 
-  public newsContent = [{
+  newsContent = [{
     image: 'https://www.usach.cl/sites/default/files/field/noticia_image/Foto%20Nota%20Principal%20Efusach%20%28propuesta%202%29.jpg',
     content: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker versions of Lorem Ipsum.'
   }, {
@@ -67,7 +67,7 @@ export class ContentService {
     content: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker versions of Lorem Ipsum.'
   }];
 
-  public studentsContent = {
+  studentsContent = {
     graduates: [
       { name: 'Guadalupe Vinegra Guernica', year: Math.floor(Math.random() * 20) + 2002 },
       { name: 'Marjorie Cerrudemos Siles', year: Math.floor(Math.random() * 20) + 2002 },
@@ -272,7 +272,7 @@ export class ContentService {
     ]
   };
 
-  public academicsContent = [{
+  academicsContent = [{
     id: 1,
     name: 'Dr. César Huiliñir C.',
     position: 'Director del Programa',
@@ -490,6 +490,15 @@ export class ContentService {
     ]
   }];
 
+  footerLinks = [
+    { content: 'Área de Gestión Institucional', url: 'http://www.usach.cl' },
+    { content: 'Área de Docencia de Pregrado', url: 'http://www.usach.cl' },
+    { content: 'Área de Investigación', url: 'http://www.usach.cl' },
+    { content: 'Área de Docencia de Postgrado', url: 'http://www.usach.cl' },
+    { content: 'Área de Vinculación con el Medio', url: 'http://www.usach.cl' },
+    { content: 'Hasta octubre de 2020', url: 'http://www.usach.cl' }
+  ];
+
   constructor() { }
 
   getProgramContent(key: string): any {
@@ -528,5 +537,9 @@ export class ContentService {
 
   getAcademicContent(id: number): any {
     return this.academicsContent.find(x => x.id === id);
+  }
+
+  getFooterLinks(): any {
+    return this.footerLinks;
   }
 }

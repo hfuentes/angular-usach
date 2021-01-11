@@ -6,8 +6,11 @@
         <span class="address font-weight-bold">OFICINA DE INFORMACIONES, RECLAMOS Y SUGERENCIAS (OIRS)  |  (562) 2 718 49 00</span>
       </div>
       <div class="col-12 col-lg-6">
-        <div class="cna text-center">
-          <img src="../../../assets/lcna_horizontal.png">
+        <div class="cna text-left">
+          <img src="../../../assets/lcna_horizontal_2.png">
+          <div class="pl-1 text-white foot-links">
+            <a *ngFor="let i of links" [href]="i.url">{{ i.content }}<br></a>
+          </div>
         </div>
       </div>
       <div class="col-12 col-lg-6">

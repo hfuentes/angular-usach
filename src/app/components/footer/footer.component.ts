@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ContentService } from 'src/app/services/content.service';
 
 @Component({
   selector: 'app-footer',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  links = [];
+
+  constructor(
+    private content: ContentService
+  ) { }
 
   ngOnInit(): void {
+    this.links = this.content.getFooterLinks();
   }
 
 }
