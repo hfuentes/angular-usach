@@ -5,24 +5,185 @@ import { Injectable } from '@angular/core';
 })
 export class ContentService {
 
+  homeContent = {
+    video: {
+      url: 'https://www.youtube.com/embed/4-wyj3CSl6I'
+    }
+  };
+
   programContent = {
     descripcion: {
-      content: 'Descripción: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys  dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem.'
+      content: `El Doctorado en Química fue creado con el propósito fundamental de promover el desarrollo de la investigación científica en Química a nivel nacional.<br><br>
+      El Programa tiene por objetivo formar científicos de excelente nivel,  capaces de generar conocimiento y adaptar el conocimiento que se necesite para el quehacer industrial y el desarrollo científico (básico y aplicado) mediante estrategias innovadoras.<br><br>
+      El Doctorado en Química es un programa de carácter académico, que está bajo la tuición de la Facultad de Química y Biología. El Doctorado exige una dedicación completa en una jornada diurna y su duración es de 8 semestres académicos.`
     },
     objetivos: {
-      content: 'Objetivos: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing like Aldus PageMaker including versions of Lorem Ipsum.'
+      content: `<b>Objetivo General</b><br><br>
+El Programa de Doctorado en Química fue creado con el propósito fundamental de entregar enfoques y perspectivas en la preparación de recursos humanos debidamente calificados, para apoyar y promover el desarrollo de la investigación científica del país en el ámbito de la Química.<br><br>
+<b>Objetivo Específico</b><br><br>
+Formar científicos en el área de la química de excelente nivel con un enfoque multidisciplinario, capaces de generar y adaptar conocimiento necesario para el desarrollo científico básico y aplicado del país.`
     },
     'dirigido-a': {
-      content: 'Dirigido a: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including of Lorem Ipsum.'
+      content: 'Dirigido a quienes poseen el grado académico de Licenciado o Magíster en Química o en alguna ciencia afín.'
     },
     plan: {
-      content: 'Plan: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has  the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software Aldus PageMaker including versions of Lorem Ipsum.'
+      content: `El Plan de Estudios comprenderá al menos 146 créditos que se distribuyen en:<br><br>
+<ul><li>Dos Asignaturas de Formación General (Química Orgánica, Química Inorgánica y Bioquímica) siendo la Físico Química obligatoria (nivel 1 y 2)</li>
+<li>Dos Asignaturas de Tópicos de Especialidad (nivel 1 y 2)</li>
+<li>Tres asignaturas de inglés (nivel 1, 2 y 3)</li>
+<li>Un Seminario Bibliográfico (Unidad de investigación) (nivel 2)</li>
+<li>Proyecto de Tesis (nivel 3)</li>
+<li>Dos  Seminarios de Avance de Tesis (nivel 5 y 7)</li>
+<li>Tesis de Grado (niveles 4 al 7)</li></ul><br>
+Las asignaturas del  programa de  Doctorado  en Química deben ser aprobadas en primera instancia. La reprobación de una asignatura será causal de eliminación del alumno del programa de Doctorado en Química.<br><br>
+<b>Tópicos de la Especialidad</b><br><br>
+Química Ecológica, Simulación molecular y sus aplicaciones en sistemas orgánicos, Química Teórica, Química de Polímeros, Físico Química de Coloides,  Tópicos de Electroquímica, Métodos Electroquímicos, Magnetismo Molecular, Tópicos en Físico Química de Suelos, Tópicos en Química Analítica, Tópicos de Productos Naturales,  Tópicos de Fotoquímica, Metodologías de Calculo Químico Cuántico, Química Atmosférica, entre otros.<br><br>
+<b>Proyecto de Tesis y Examen de Calificación</b><br><br>
+En el tercer semestre de permanencia en el Programa el alumno(a) debe entregar su Proyecto de Tesis y solicitar al Comité de Postgrado su Examen de Calificación. El proyecto debe estar avalado por el profesor guía, el cual debe pertenecer al plantel regular de profesores del Programa. Este examen consistirá en la exposición pública y defensa de su Proyecto de Tesis, ante la Comisión de Examen de Calificación. En él se evaluarán tanto los conocimientos básicos del candidato(a), principalmente en relación con su área de formación, como la calidad del Proyecto.<br><br>
+<b>Tesis</b><br><br>
+Desarrolla el proyecto de tesis rindiendo cada año un avance ante la comisión de seguimiento. La Tesis es un trabajo de investigación original, en un área de la química que el candidato debe realizar para demostrar su creatividad en la formulación de una hipótesis en torno a un problema químico de actualidad, así como en la provisión de elementos que constituyan pruebas de su validez. El trabajo de Tesis estará restringido a las líneas de investigación que se desarrollan en la Facultad de Química y Biología, y que son financiadas por proyectos de investigación.<br><br>
+El periodo máximo de permanencia en el programa es de cinco años.<br><br>
+<b>Campo ocupacional</b><br><br>
+El Doctor en Química puede desempeñarse en:<br><br>
+<ul><li>Todas las áreas de la Industria Química, tales como: alimentos, metalmecánica, acero, galvanotecnia, petróleo, papel y celulosa, pintura y recubrimientos, cemento, cuero, agroindustria, plásticos, cosmética, minería, etc.</li>
+<li>Como  Académico e investigador en las Universidades e Institutos de Investigación, en Centros de Desarrollo Tecnológico, entre otros.</li></ul><br>
+<b>Graduación y Titulación</b><br><br>
+<ul><li>Haber aprobado el plan de estudios completo de acuerdo a las normas establecidas.</li>
+<li>Tener un promedio de calificaciones igual o superior a cinco en cada uno de los grupos de Asignaturas de Formación General y Tópicos de Especialidad.</li>
+<li>Haber aprobado, con  el requisito de asistencia, las actividades indicadas en el punto 19, letra c, de las normas internas del programa.</li>
+<li>Haber aprobado la Tesis de Doctorado,  Examen Privado y Examen de Grado.</li></ul>
+      `
     },
     acreditacion: {
-      content: 'Acreditacion: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus including versions of Lorem Ipsum.'
+      content: 'Por definir ...'
     },
     investigacion: {
-      content: 'Investigacion: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker versions of Lorem Ipsum.'
+      content: `<b>Química Inorgánica:</b><br><br>
+<ul><li>Química Inorgánica Computacional.
+<li>Magnetismo Molecular.</li>
+<li>Espintrónica Molecular.</li>
+<li>Interacción de los metales con sistemas, moléculas o ambientes de origen biológico.</li>
+<li>Estudio metales de transición (y otros metales) en solución acuosa con materiales biológicos, principalmente bacterias de interés médico e industrial.</li>
+<li>Síntesis orgánica de ligandos.</li>
+<li>Síntesis y Reactividad de Complejos Organometálicos.</li>
+<li>Aplicación en Electrodos modificados.</li>
+<li>Aplicación en Química médica (bioorganometálica).</li>
+<li>Resonancia magnética nuclear.</li>
+<li>Compuesto de coordinación de cobre.</li>
+<li>Química supramolecular.</li>
+<li>Magnetismo Molecular y espintrónica (utilización del espín).</li>
+<li>Estructura Electrónica de sistemas de valencia mixta.</li>
+<li>Química de coordinación de lantánidos (Tierras raras).</li>
+<li>Polioxometalatos.</li>
+<li>Nanotubos de Carbono funcionalizados.</li>
+<li>Recubrimientos nanoestructurados autolimpiantes.</li>
+<li>Sistemas laminares para fotodegradación.</li>
+<li>Síntesis de compuestos de coordinación.</li>
+<li>Química supramolecular.</li>
+<li>Reconocimiento de ADN a través de interacciones no covalentes con complejos metálicos.</li></ul><br>
+<b>Química Orgánica:</b><br><br>
+<ul><li>Rol extracelular de ATP como mensajero intercelular.</li>
+<li>Modulación alostérica de receptores, el caso de los receptores P2X.</li>
+<li>Biología estructural de Receptores P2X agonismo alostérico.</li>
+<li>Polifenoles como moduladores alostéricos de eNOS y otros mecanismos celulares.</li>
+<li>Farmacología de nanopartículas y nanociencia.</li>
+<li>Química Computacional.</li>
+<li>Química Médica.</li>
+<li>Preparación y caracterización de materiales nanocompositos en base a polímeros con aplicación en campo médico y envases de alimentos.</li>
+<li>Preparación de andamios a partir de polímeros biodegradables para su uso en bioingeniería de tejidos.</li>
+<li>Materiales de Construcción a partir de polímeros reciclados.</li>
+<li>Fisiología Vegetal.</li>
+<li>Biotecnología Vegetal.</li>
+<li>Mecanismo de control del hongo fitopatógeno Botrytis cinerea utilizando extractos, compuestos naturales o compuestos hemisintéticos.</li>
+<li>Síntesis de compuestos azaheterocíclicos.</li>
+<li>Reacciones de acoplamiento cruzado catalizadas por Pd.</li>
+<li>Síntesis y caracterización fotofísica de tintes orgánicos.</li>
+<li>Estudios computacionales de mecanismos de reacción y propiedades espectrales de compuestos orgánicos.</li>
+<li>Química de Productos Naturales y evaluación de sus actividades inmunoestimulantes y antimicrobianas contra patógenos que atacan salmones.</li>
+<li>Biopolimeros y Bioproductos.</li>
+<li>Química de Recursos Naturales.</li>
+<li>Catálisis Homogénea.</li>
+<li>Líquidos iónicos.</li>
+<li>Química verde.</li>
+<li>Revalorización de residuos industriales mediante biocatálisis.</li>
+<li>Síntesis de prebióticos derivados de lactosa.</li>
+<li>Inmovilización de enzimas.</li>
+<li>Síntesis enzimática de tensoactivos.</li>
+<li>Modelación y simulación de procesos enzimáticos.</li></ul><br>
+<b>Química Analítica:</b><br><br>
+<ul><li>Síntesis de Nanopartículas.</li>
+<li>Química de Superficies.</li>
+<li>Medioambiente.</li>
+<li>Remoción de contaminantes en sistemas acuosos.</li>
+<li>Microbiología básica y aplicada.</li>
+<li>Toxicidad y resistencia bacteriana a metal(oid)es.</li>
+<li>Biosíntesis de nanoestructura utilizando flavoproteínas reductoras de metal(oid)es.</li>
+<li>Identificación y producción de enzimas de extremófilos.</li>
+<li>Biotecnología de enzimas.</li>
+<li>Smog fotoquímico.</li>
+<li>Ozono Troposférico.</li>
+<li>Química de las aguas de rocíos en zonas urbanas y niveles atmosféricos de compuestos fenólicos.</li>
+<li>Estudio de las emisiones provenientes de la quema de biomasa y su oxidabilidad..</li>
+<li>Estudio de Trazadores de la quema de madera.</li>
+<li>Tratamiento de Aguas.</li>
+<li>Electroanálisis.</li>
+<li>Química Ambiental.</li>
+<li>Cromatografía.</li>
+<li>Tratamiento de muestras.</li>
+<li>Síntesis y caracterización de polímeros para la remoción de contaminantes.</li>
+<li>Tecnología de membranas para el tratamiento de agua.</li>
+<li>Nanomateriales para el monitoreo y tratamiento de contaminantes.</li>
+<li>Materiales derivados de biomasa para la generación de bionanocompositos.</li>
+<li>Físico química de suelos y medio ambiente.</li>
+<li>Ciencias del suelo.</li>
+<li>Físico química de suelos y medio ambiente.</li>
+<li>Detección de metales pesados a nivel de trazas y ultratrazas en muestras ambientales, empleando electrodos químicamente modificados (EQM).</li>
+<li>Evolución de la reacción de hidrógeno/oxígeno.</li>
+<li>Reacción de reducción del oxígeno.</li>
+<li>Síntesis y modelación de la reducción del dióxido de carbono.</li></ul><br>
+<b>Fisicoquímica:</b><br><br>
+<ul><li>Química de Radicales Libres en medios microheterogéneos.</li>
+<li>Interacción de nanopartículas con radicales libres.</li>
+<li>Fotoquímica de sondas solvatofluorcrómicas.</li>
+<li>Diseño y estudio de sondas fluorescentes.</li>
+<li>Mecanismos de oxidación de proteínas y aminoácidos.</li>
+<li>Radicales libres y antioxidantes.</li>
+<li>Especies electrónicamente excitadas y radicales libres fotoinducidos.</li>
+<li>Mecanismos de transferencia de carga y Transporte de carga.</li>
+<li>Descriptores de reactividad DFT global y local.</li>
+<li>Propiedades de óptica lineal y no lineal.</li>
+<li>Aromaticidad y densidades de corriente inducidas magnéticamente.</li>
+<li>Propiedades derivadas de la teoría cuántica de átomos en moléculas.</li>
+<li>Físico – Química de Superficies y Sistemas a Nanoescala.</li>
+<li>Aplicaciones electroquímicas.</li>
+<li>Electrocatálisis y fotoelectrocatálisis.</li>
+<li>Degradación de Compuestos.</li>
+<li>Contaminantes, clorofenoles antibióticos.</li>
+<li>Electrodos Modificados.</li>
+<li>Celdas solares.</li>
+<li>Dióxido de titanio.</li>
+<li>Degradación de compuestos orgánicos fotolizados usando irradiación UV-Vis en suspensiones semiconductoras.</li>
+<li>Comportamiento Cinético y Fotoquímico de compuestos orgánicos en sistemas homogéneos y heterogéneos.</li>
+<li>Capacidad Antioxidante y Radicales Libres.</li>
+<li>Electrónica Molecular.</li>
+<li>Electrocatálisis.</li></ul><br>
+<b>Electroquímica:</b><br><br>
+<ul><li>Electrocatálisis.</li>
+<li>Electroanálisis.</li>
+<li>Electroquímica de Vino y Polifenoles.</li>
+<li>Líquidos Iónicos.</li>
+<li>Baterías de Li-aire.</li>
+<li>Química verde: electroquímica.</li>
+<li>Anodizado de Aluminio.</li>
+<li>Recubrimientos anticorrosivos.</li>
+<li>Biocorrosión.</li>
+<li>Comportamiento electroquímico de metales ActivoPasivos.</li>
+<li>Fisicoquímica de superficies, electrocatalisis, sensores electroquímicos, nanotecnología.</li>
+<li>Electroquímica.</li>
+<li>Desarrollo de materiales de electrodos para la conversión de energía y para sensores electroquímicos.</li>
+<li>Nuevos materiales para baterías de litio.</li>
+<li>Electrodos con actividad para la degradación de especies orgánicas contaminantes en aguas.</li>
+<li>Regulación de la actividad electrocatalítica en la electrooxidación de alcoholes.</li></ul><br>`
     }
   };
 
@@ -500,6 +661,10 @@ export class ContentService {
   ];
 
   constructor() { }
+
+  getHomeVideo(): any {
+    return this.homeContent.video;
+  }
 
   getProgramContent(key: string): any {
     return this.programContent[key] ? this.programContent[key].content : '';

@@ -1,6 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { WindowRef } from '../../services/window.service';
 import Swipe from 'swipejs';
+import { ContentService } from 'src/app/services/content.service';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +12,12 @@ import Swipe from 'swipejs';
 export class HomeComponent implements OnInit {
   @ViewChild('videoPlayer') videoplayer: ElementRef;
 
-  constructor(private winRef: WindowRef) { }
+  video = null;
+
+  constructor(
+    private winRef: WindowRef,
+    private content: ContentService
+  ) { }
 
   ngOnInit(): void {
     this.winRef.mySwipe = new Swipe(document.getElementById('slider'), {
@@ -22,6 +28,7 @@ export class HomeComponent implements OnInit {
       disableScroll: false,
       stopPropagation: false,
     });
+    this.video = this.content.getHomeVideo();
   }
   prevSlide = () => {
     this.winRef.mySwipe.prev();
