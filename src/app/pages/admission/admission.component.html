@@ -18,43 +18,31 @@
           Fechas del proceso de admisión
         </button>
         <div class="d-lg-none mobile-active-content" [ngClass]="{'active': activeSection === 'fechas'}">
-          <div class="py-3">
-            {{activeContent}}
-          </div>
+          <div class="text-justify py-3" [innerHTML]="activeContent"></div>
         </div>
         <button class="navigation-btn" (click)="goToNav('requisitos')" [ngClass]="{'active': activeSection === 'requisitos'}">
           Requisitos para postular
         </button>
         <div class="d-lg-none mobile-active-content" [ngClass]="{'active': activeSection === 'requisitos'}">
-          <div class="py-3">
-            {{activeContent}}
-          </div>
+          <div class="text-justify py-3" [innerHTML]="activeContent"></div>
         </div>
         <button class="navigation-btn" (click)="goToNav('becas')" [ngClass]="{'active': activeSection === 'becas'}">
           Becas y descuentos
         </button>
         <div class="d-lg-none mobile-active-content" [ngClass]="{'active': activeSection === 'becas'}">
-          <div class="py-3">
-            {{activeContent}}
-          </div>
+          <div class="text-justify py-3" [innerHTML]="activeContent"></div>
         </div>
         <button class="navigation-btn" (click)="goToNav('postula')" [ngClass]="{'active': activeSection === 'postula'}">
           Postula
         </button>
         <div class="d-lg-none mobile-active-content" [ngClass]="{'active': activeSection === 'postula'}">
-          <div class="py-3">
-            {{activeContent}}
-          </div>
+          <div class="text-justify py-3" [innerHTML]="activeContent"></div>
         </div>
-        <!-- <div class="download-info d-none d-lg-flex">
-          <img src="../../../assets/pdf.png">
-        </div> -->
       </div>
       <div class="col-6 d-none d-lg-block border-left px-4">
         <div class="active-content">
-          <div>
-            {{activeContent}}
-          </div>
+          <div class="text-justify" [innerHTML]="activeContent"></div>
+          <app-download-pdf [file]="activeFile"></app-download-pdf>
         </div>
       </div>
     </div>

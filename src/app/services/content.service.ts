@@ -51,8 +51,8 @@ El Doctor en Química puede desempeñarse en:<br><br>
 <ul><li>Haber aprobado el plan de estudios completo de acuerdo a las normas establecidas.</li>
 <li>Tener un promedio de calificaciones igual o superior a cinco en cada uno de los grupos de Asignaturas de Formación General y Tópicos de Especialidad.</li>
 <li>Haber aprobado, con  el requisito de asistencia, las actividades indicadas en el punto 19, letra c, de las normas internas del programa.</li>
-<li>Haber aprobado la Tesis de Doctorado,  Examen Privado y Examen de Grado.</li></ul>
-      `
+<li>Haber aprobado la Tesis de Doctorado,  Examen Privado y Examen de Grado.</li></ul>`,
+      file: '../../../assets/pdf/Plan de estudios_Plan de Estudios.pdf'
     },
     acreditacion: {
       content: 'Por definir ...'
@@ -183,22 +183,33 @@ El Doctor en Química puede desempeñarse en:<br><br>
 <li>Desarrollo de materiales de electrodos para la conversión de energía y para sensores electroquímicos.</li>
 <li>Nuevos materiales para baterías de litio.</li>
 <li>Electrodos con actividad para la degradación de especies orgánicas contaminantes en aguas.</li>
-<li>Regulación de la actividad electrocatalítica en la electrooxidación de alcoholes.</li></ul><br>`
+<li>Regulación de la actividad electrocatalítica en la electrooxidación de alcoholes.</li></ul><br>`,
+      file: '../../../assets/pdf/Lineas de Investigación_Cuerpo_academico_y_lineas_de_investigacion.pdf'
+    },
+    contacto: {
+      email: 'postgrados.fqb@usach.cl'
     }
   };
 
   admissionContent = {
     fechas: {
-      content: 'Fechas: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including of Lorem Ipsum.'
+      content: 'Por definir ...'
     },
     requisitos: {
-      content: 'Requisitos: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has  the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software Aldus PageMaker including versions of Lorem Ipsum.'
+      content: 'Por definir ...'
     },
     becas: {
-      content: 'Becas: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus including versions of Lorem Ipsum.'
+      content: `La Universidad de Santiago de Chile apoya al programa de Doctorado en Química en términos del siguiente programa de becas (se adjunta Exento N°1102):<br><br>
+      <ul><li>Becas de Exención de Arancel,</li>
+      <li>Becas de Ayuda Económica,</li>
+      <li>Becas de Apoyo a la Investigación y</li>
+      <li>Apoyo Especial a Programas.</li></ul><br>
+      Las becas de arancel y ayuda económica se otorgan por un periodo de hasta 8 semestres consecutivos para alumnos/as en programas de Doctorado. Cabe mencionar que las becas de ayuda económica se otorgan a los alumnos pertenecientes a los programas acreditados. Las Becas de Apoyo a la Investigación se refieren al financiamiento para participar en congresos científicos, y las becas de Apoyo especial a Programas consisten en financiamiento para visitas de profesores externos a la Universidad.`,
+      file: '../../../assets/pdf/Admisión_Reglamento_becas_postgrado.pdf'
     },
     postula: {
-      content: 'Postula: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker versions of Lorem Ipsum.'
+      content: 'Por definir ...',
+      file: '../../../assets/pdf/Admisión_Afiche_doctorado_en_quimica_-2020.pdf'
     }
   };
 
@@ -670,8 +681,20 @@ El Doctor en Química puede desempeñarse en:<br><br>
     return this.programContent[key] ? this.programContent[key].content : '';
   }
 
+  getProgramContact(): any {
+    return this.programContent.contacto;
+  }
+
+  getProgramFile(key: string): any {
+    return this.programContent[key] ? this.programContent[key].file : undefined;
+  }
+
   getAdmissionContent(key: string): any {
     return this.admissionContent[key] ? this.admissionContent[key].content : '';
+  }
+
+  getAdmissionFile(key: string): any {
+    return this.admissionContent[key] ? this.admissionContent[key].file : undefined;
   }
 
   getNewsContent(limit: number): any {

@@ -11,8 +11,10 @@ import { ContentService } from '../../services/content.service';
 export class ProgramComponent implements OnInit {
   activeSection = null;
   activeContent = null;
+  activeFile = null;
   program = null;
   winWidth = null;
+  contact = null;
 
   constructor(
     private winRef: WindowRef,
@@ -28,6 +30,8 @@ export class ProgramComponent implements OnInit {
     });
     this.winWidth = this.winRef.nativeWindow.innerWidth;
     this.activeContent = this.content.getProgramContent(this.activeSection);
+    this.contact = this.content.getProgramContact();
+    this.activeFile = this.content.getProgramFile(this.activeSection);
   }
 
   goToNav = (target) => {
@@ -38,5 +42,6 @@ export class ProgramComponent implements OnInit {
       this.activeSection = this.activeSection !== target ? target : null;
     }
     this.activeContent = this.content.getProgramContent(this.activeSection);
+    this.activeFile = this.content.getProgramFile(this.activeSection);
   }
 }

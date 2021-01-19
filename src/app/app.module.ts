@@ -19,6 +19,7 @@ import { StudentsComponent } from './pages/students/students.component';
 import { ResearchComponent } from './pages/research/research.component';
 import { NewsComponent } from './pages/news/news.component';
 import { AcademicDetailsComponent } from './pages/academic-details/academic-details.component';
+import { DownloadPdfComponent } from './components/download-pdf/download-pdf.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { AcademicDetailsComponent } from './pages/academic-details/academic-deta
     ResearchComponent,
     NewsComponent,
     AcademicDetailsComponent,
+    DownloadPdfComponent,
   ],
   imports: [
     BrowserModule,

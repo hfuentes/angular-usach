@@ -12,6 +12,7 @@ export class AdmissionComponent implements OnInit {
 
   activeSection = null;
   activeContent = null;
+  activeFile = null;
   program = null;
   winWidth = null;
 
@@ -29,6 +30,7 @@ export class AdmissionComponent implements OnInit {
     });
     this.winWidth = this.winRef.nativeWindow.innerWidth;
     this.activeContent = this.content.getAdmissionContent(this.activeSection);
+    this.activeFile = this.content.getAdmissionFile(this.activeSection);
   }
 
   goToNav = (target) => {
@@ -39,6 +41,7 @@ export class AdmissionComponent implements OnInit {
       this.activeSection = this.activeSection !== target ? target : null;
     }
     this.activeContent = this.content.getAdmissionContent(this.activeSection);
+    this.activeFile = this.content.getAdmissionFile(this.activeSection);
   }
 
 }
