@@ -8,19 +8,19 @@
 </div>
 <div class="program-content">
   <div class="container py-4">
-    <div class="card mb-3" *ngFor="let i of news">
+    <div class="card mb-3" *ngFor="let noticia of news">
       <div class="row no-gutters">
         <div class="col-md-3">
-          <img [src]="i.image" class="card-img m-2 img-thumbnail">
+          <img [src]="noticia.imagen" class="card-img m-2 img-thumbnail">
         </div>
         <div class="col-md-9">
           <div class="card-body">
-            <!-- <h5 class="card-title">Card title</h5> -->
-            <p class="card-text">{{ i.content }}</p>
-            <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
-            <div class="text-right">
-              <button class="btn btn-warning">Ver más</button>
-            </div>
+            <h5 class="card-title">{{ noticia.titulo }}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{ noticia.bajada }}</h6>
+            <div class="card-text" [innerHTML]="noticia.cuerpo"></div>
+            <p class="card-text">
+              <small class="text-muted">{{ noticia.createdAt | date: 'dd/MM/yyyy HH:mm' }} Hrs.</small>
+            </p>
           </div>
         </div>
       </div>
