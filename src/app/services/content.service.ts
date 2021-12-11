@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -671,7 +673,14 @@ El Doctor en Química puede desempeñarse en:<br><br>
     { content: 'Hasta octubre de 2020', url: 'http://www.usach.cl' }
   ];
 
-  constructor() { }
+  constructor(
+    private http: HttpClient
+  ) { }
+
+  api(name: string, id?: string): any {
+    const base = `${environment.apiUrl}/api/${name}`;
+    return id ? `${base}/${id}` : base;
+  }
 
   getHomeVideo(): any {
     return this.homeContent.video;
@@ -697,9 +706,10 @@ El Doctor en Química puede desempeñarse en:<br><br>
     return this.admissionContent[key] ? this.admissionContent[key].file : undefined;
   }
 
-  getNewsContent(limit: number): any {
-    const l = this.newsContent.length;
-    return this.newsContent.slice(limit > l ? 0 : l - limit, l);
+  getNewsContent(): Promise<any> {
+    return this.http.get(this.api('noticias/all')).toPromise();
+    // const l = this.newsContent.length;
+    // return this.newsContent.slice(limit > l ? 0 : l - limit, l);
   }
 
   getGraduatesContent(limit: number): any {

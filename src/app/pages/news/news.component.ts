@@ -19,7 +19,11 @@ export class NewsComponent implements OnInit {
 
   ngOnInit(): void {
     this.winWidth = this.winRef.nativeWindow.innerWidth;
-    this.news = this.content.getNewsContent(10);
+    this.news = this.content.getNewsContent().then(data => {
+      this.news = data;
+    }).catch(err => {
+      console.error(err);
+    });
   }
 
 }
