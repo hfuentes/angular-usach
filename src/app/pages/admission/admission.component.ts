@@ -15,21 +15,24 @@ export class AdmissionComponent implements OnInit {
   activeFile = null;
   program = null;
   winWidth = null;
+  data: any = {};
 
   constructor(
     private winRef: WindowRef,
     private route: ActivatedRoute,
     private router: Router,
     private content: ContentService
-    ) { }
+  ) { }
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       this.activeSection = params.activeSection;
-      console.log(this.route);
     });
+    this.content.getAdmissionContent().then(ad => {
+      this.data = ad;
+      this.activeContent = this.data[this.activeSection];
+    }).catch(console.error);
     this.winWidth = this.winRef.nativeWindow.innerWidth;
-    this.activeContent = this.content.getAdmissionContent(this.activeSection);
     this.activeFile = this.content.getAdmissionFile(this.activeSection);
   }
 
@@ -40,7 +43,7 @@ export class AdmissionComponent implements OnInit {
     } else {
       this.activeSection = this.activeSection !== target ? target : null;
     }
-    this.activeContent = this.content.getAdmissionContent(this.activeSection);
+    this.activeContent = this.data[this.activeSection];
     this.activeFile = this.content.getAdmissionFile(this.activeSection);
   }
 

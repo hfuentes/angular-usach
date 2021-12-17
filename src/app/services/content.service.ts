@@ -698,8 +698,8 @@ El Doctor en Química puede desempeñarse en:<br><br>
     return this.programContent[key] ? this.programContent[key].file : undefined;
   }
 
-  getAdmissionContent(key: string): any {
-    return this.admissionContent[key] ? this.admissionContent[key].content : '';
+  getAdmissionContent(): Promise<any> {
+    return this.http.get(this.api('admision')).toPromise();
   }
 
   getAdmissionFile(key: string): any {
@@ -708,8 +708,6 @@ El Doctor en Química puede desempeñarse en:<br><br>
 
   getNewsContent(): Promise<any> {
     return this.http.get(this.api('noticias/all')).toPromise();
-    // const l = this.newsContent.length;
-    // return this.newsContent.slice(limit > l ? 0 : l - limit, l);
   }
 
   getGraduatesContent(limit: number): any {
