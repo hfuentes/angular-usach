@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-image-with-text',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./image-with-text.component.scss']
 })
 export class ImageWithTextComponent implements OnInit {
+
+  @Input() noticia: { id: string, titulo: string, imagen: string };
 
   constructor() { }
 

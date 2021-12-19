@@ -10,6 +10,7 @@ export class BackgroundWithTextComponent implements OnInit {
   @Input() mainText;
   @Input() secondaryText;
   @Input() url;
+  @Input() imageSrc;
 
   constructor(private router: Router) { }
 
@@ -17,7 +18,6 @@ export class BackgroundWithTextComponent implements OnInit {
   }
 
   onClick = () => {
-    console.log(this.url);
     this.router.navigate([this.url]);
   }
 

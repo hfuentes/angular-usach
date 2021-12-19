@@ -16,24 +16,24 @@
       <div class="col-12 col-lg-6">
         <!--OPCIONALES DEPENDE DEL PROGRAMA-->
         <div class="rrss">
-          <div>
+          <div style="cursor: pointer;" [title]="footerData.facebook" (click)="goExternal('facebook')">
             <img src="../../../assets/fb.png">
             <span class="d-none d-lg-block">facebook</span>
           </div>
-          <div>
-            <img src="../../../assets/tw.png">
+          <div style="cursor: pointer;">
+            <img src="../../../assets/tw.png" [title]="footerData.twitter" (click)="goExternal('twitter')">
             <span class="d-none d-lg-block">twitter</span>
           </div>
-          <div>
+          <div style="cursor: pointer;">
             <img src="../../../assets/yout.png">
             <span class="d-none d-lg-block">youtube</span>
           </div>
-          <div>
+          <div style="cursor: pointer;">
             <img src="../../../assets/linkd.png">
             <span class="d-none d-lg-block">linkedin</span>
           </div>
-          <div>
-            <img src="../../../assets/ints.png">
+          <div style="cursor: pointer;">
+            <img src="../../../assets/ints.png" [title]="footerData.instagram" (click)="goExternal('instagram')">
             <span class="d-none d-lg-block">instagram</span>
           </div>
         </div>

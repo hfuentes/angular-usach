@@ -686,6 +686,10 @@ El Doctor en Química puede desempeñarse en:<br><br>
     return this.homeContent.video;
   }
 
+  getHomeData(): Promise<any> {
+    return this.http.get(this.api('inicial/public')).toPromise();
+  }
+
   getProgramContent(key: string): any {
     return this.programContent[key] ? this.programContent[key].content : '';
   }
@@ -737,5 +741,9 @@ El Doctor en Química puede desempeñarse en:<br><br>
 
   getFooterLinks(): any {
     return this.footerLinks;
+  }
+
+  getFooterData(): any {
+    return this.http.get(this.api('inicial/footer/public')).toPromise();
   }
 }

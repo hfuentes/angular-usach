@@ -2,6 +2,7 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { WindowRef } from '../../services/window.service';
 import Swipe from 'swipejs';
 import { ContentService } from 'src/app/services/content.service';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home',
@@ -12,11 +13,41 @@ import { ContentService } from 'src/app/services/content.service';
 export class HomeComponent implements OnInit {
   @ViewChild('videoPlayer') videoplayer: ElementRef;
 
-  video = null;
+  video: SafeResourceUrl;
+  homeData: {
+    slide1: string,
+    slide2: string,
+    slide3: string,
+    slide4: string,
+    video: string,
+    email: string,
+    admision: string,
+    conocenos: string,
+    plan: string,
+    acreditacion: string,
+    noticia1: any,
+    noticia2: any,
+    noticia3: any
+  } = {
+      slide1: '',
+      slide2: '',
+      slide3: '',
+      slide4: '',
+      video: '',
+      email: '',
+      admision: '',
+      conocenos: '',
+      plan: '',
+      acreditacion: '',
+      noticia1: undefined,
+      noticia2: undefined,
+      noticia3: undefined
+    };
 
   constructor(
     private winRef: WindowRef,
-    private content: ContentService
+    private content: ContentService,
+    private sanitizer: DomSanitizer
   ) { }
 
   ngOnInit(): void {
@@ -28,8 +59,12 @@ export class HomeComponent implements OnInit {
       disableScroll: false,
       stopPropagation: false,
     });
-    this.video = this.content.getHomeVideo();
+    this.content.getHomeData().then(data => {
+      this.homeData = data;
+      this.video = this.sanitizer.bypassSecurityTrustResourceUrl(this.homeData.video);
+    }).catch(err => console.error(err));
   }
+
   prevSlide = () => {
     this.winRef.mySwipe.prev();
   }
