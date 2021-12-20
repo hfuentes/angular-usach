@@ -2,7 +2,7 @@
   <img class="banner" src="../../../assets/program-banner.jpg">
   <div class="title-container">
     <div class="container">
-      <span>{{ academic.name }}</span>
+      <span>{{ academic.nombre }}</span>
     </div>
   </div>
 </div>
@@ -10,39 +10,31 @@
   <div class="container py-4">
     <div class="row">
       <div class="col-12 col-md-3 col-lg-3">
-        <img [src]="academic.image" class="rounded-circle">
+        <img [src]="academic.imagen" class="rounded-circle">
       </div>
       <div class="col-12 col-md-9 col-lg-9">
         <dl>
-          <dt class="text-secondary">Correo:</dt>
-          <dd>{{ academic.email }}</dd>
-          <ng-container *ngFor="let i of academic.degrees">
-            <dt class="text-secondary">{{ i.title }}</dt>
-            <dd>{{ i.content }}</dd>
-          </ng-container>
+          <dt class="text-secondary">Correo</dt>
+          <dd>{{ academic.correo }}</dd>
+          <dt class="text-secondary">Resumen</dt>
+          <dd [innerHTML]="academic.resumen"></dd>
         </dl>
       </div>
       <div class="col-12">
-        <p title="Ver/Ocultar Publicaciones" class="text-warning" style="cursor: pointer;" (click)="showPapers = !showPapers">
+        <p title="Ver/Ocultar Publicaciones" class="text-warning" style="cursor: pointer;"
+          (click)="showPapers = !showPapers">
           <b>Publicaciones</b>
         </p>
       </div>
-      <div class="col-12" *ngIf="showPapers">
-        <ul *ngFor="let i of academic.papers">
-          <li>{{ i.content }}</li>
-        </ul>
-      </div>
+      <div class="col-12" *ngIf="showPapers" [innerHTML]="academic.publicaciones"></div>
       <div class="col-12">
-        <p title="Ver/Ocultar Proyectos" class="text-warning" style="cursor: pointer;" (click)="showProyects = !showProyects">
+        <p title="Ver/Ocultar Proyectos" class="text-warning" style="cursor: pointer;"
+          (click)="showProyects = !showProyects">
           <b>Proyectos</b>
         </p>
         <br>
       </div>
-      <div class="col-12" *ngIf="showProyects">
-        <ul *ngFor="let i of academic.proyects">
-          <li>{{ i.content }}</li>
-        </ul>
-      </div>
+      <div class="col-12" *ngIf="showProyects" [innerHTML]="academic.proyectos"></div>
     </div>
   </div>
 </div>

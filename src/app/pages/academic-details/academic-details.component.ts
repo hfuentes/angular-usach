@@ -22,15 +22,12 @@ export class AcademicDetailsComponent implements OnInit {
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params => {
       if (params.id) {
-        try {
-          this.academic = this.content.getAcademicContent(parseInt(params.id, 10));
-          if (!this.academic) {
-            this.router.navigate(['/']);
-          }
-        } catch (err) {
+        this.content.getAcademico(params.id).then(data => {
+          this.academic = data;
+        }).catch(err => {
           console.error(err);
           this.router.navigate(['/']);
-        }
+        });
       }
     });
   }

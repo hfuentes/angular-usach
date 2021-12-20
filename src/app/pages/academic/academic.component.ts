@@ -21,7 +21,12 @@ export class AcademicComponent implements OnInit {
 
   ngOnInit(): void {
     this.winWidth = this.winRef.nativeWindow.innerWidth;
-    this.academics = this.content.getAcademicsContent(10);
+    // this.academics = this.content.getAcademicsContent(10);
+    this.content.getAcademicos().then(data => {
+      this.academics = data;
+    }).catch(err => {
+      console.error(err);
+    });
   }
 
   goToAcademic(id: number): void {
