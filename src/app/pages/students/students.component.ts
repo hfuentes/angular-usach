@@ -20,16 +20,17 @@ export class StudentsComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private content: ContentService
-    ) { }
+  ) { }
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       this.activeSection = params.activeSection;
-      console.log(this.route);
     });
     this.winWidth = this.winRef.nativeWindow.innerWidth;
-    this.graduates = this.content.getGraduatesContent(20);
-    this.thesis = this.content.getThesisContent(20);
+    this.content.getEstudiantes()
+      .then(data => (this.graduates = data, this.content.getTesis()))
+      .then(data => this.thesis = data)
+      .catch(err => console.error(err));
   }
 
   goToNav = (target) => {

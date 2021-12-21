@@ -730,6 +730,14 @@ El Doctor en Química puede desempeñarse en:<br><br>
     return this.studentsContent.thesis.slice(limit > l ? 0 : l - limit, l);
   }
 
+  getEstudiantes(): Promise<any> {
+    return this.http.get(this.api('estudiantes/public')).toPromise();
+  }
+
+  getTesis(): Promise<any> {
+    return this.http.get(this.api('tesis/public')).toPromise();
+  }
+
   getAcademicsContent(limit: number): any {
     const l = this.academicsContent.length;
     return this.academicsContent.slice(limit > l ? 0 : l - limit, l);
