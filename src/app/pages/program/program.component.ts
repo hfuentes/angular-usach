@@ -15,6 +15,7 @@ export class ProgramComponent implements OnInit {
   program = null;
   winWidth = null;
   contact = null;
+  programaData = null;
 
   constructor(
     private winRef: WindowRef,
@@ -26,11 +27,12 @@ export class ProgramComponent implements OnInit {
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       this.activeSection = params.activeSection;
-      console.log(this.route);
     });
+    this.content.getProgramaData().then(data => {
+      this.programaData = data;
+      this.activeContent = this.programaData[this.activeSection];
+    }).catch(err => console.error(err));
     this.winWidth = this.winRef.nativeWindow.innerWidth;
-    this.activeContent = this.content.getProgramContent(this.activeSection);
-    this.contact = this.content.getProgramContact();
     this.activeFile = this.content.getProgramFile(this.activeSection);
   }
 
@@ -41,7 +43,7 @@ export class ProgramComponent implements OnInit {
     } else {
       this.activeSection = this.activeSection !== target ? target : null;
     }
-    this.activeContent = this.content.getProgramContent(this.activeSection);
+    this.activeContent = this.programaData[this.activeSection];
     this.activeFile = this.content.getProgramFile(this.activeSection);
   }
 }
