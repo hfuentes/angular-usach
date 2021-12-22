@@ -21,6 +21,7 @@ import { ResearchComponent } from './pages/research/research.component';
 import { NewsComponent } from './pages/news/news.component';
 import { AcademicDetailsComponent } from './pages/academic-details/academic-details.component';
 import { DownloadPdfComponent } from './components/download-pdf/download-pdf.component';
+import { NewsDetailsComponent } from './pages/news-details/news-details.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { DownloadPdfComponent } from './components/download-pdf/download-pdf.com
     NewsComponent,
     AcademicDetailsComponent,
     DownloadPdfComponent,
+    NewsDetailsComponent,
   ],
   imports: [
     BrowserModule,

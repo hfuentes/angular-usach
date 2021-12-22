@@ -11,16 +11,16 @@
     <div class="card mb-3" *ngFor="let noticia of news">
       <div class="row no-gutters">
         <div class="col-md-3">
-          <img [src]="noticia.imagen" class="card-img m-2 img-thumbnail">
+          <img [src]="noticia.imagen" class="card-img m-2 mt-4 img-thumbnail">
         </div>
         <div class="col-md-9">
           <div class="card-body">
-            <h5 class="card-title">{{ noticia.titulo }}</h5>
-            <h6 class="card-subtitle mb-2 text-muted">{{ noticia.bajada }}</h6>
-            <div class="card-text" [innerHTML]="noticia.cuerpo"></div>
-            <p class="card-text">
-              <small class="text-muted">{{ noticia.createdAt | date: 'dd/MM/yyyy HH:mm' }} Hrs.</small>
-            </p>
+            <small class="text-muted">{{ noticia.createdAt | date: 'dd/MM/yyyy | HH:mm' }} Hrs.</small>
+            <h4 class="card-title">{{ noticia.titulo }}</h4>
+            <h5 class="card-subtitle mb-2 text-muted">{{ noticia.bajada }}</h5>
+            <div class="text-right">
+              <button class="btn btn-warning" [routerLink]="['/noticias/' + noticia.id]">Ver más</button>
+            </div>
           </div>
         </div>
       </div>
