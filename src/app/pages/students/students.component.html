@@ -45,13 +45,15 @@
                 <tr>
                   <th scope="col">Título</th>
                   <th scope="col">Autor</th>
+                  <th scope="col">Profesor</th>
                   <th scope="col">Año</th>
                 </tr>
               </thead>
               <tbody>
                 <tr *ngFor="let i of thesis">
                   <td>{{ i.titulo }}</td>
-                  <td>{{ i.autor }}</td>
+                  <td>{{ i.autor + (i.coautor ? (' (Coautor: ' + i.coautor + ')') : '') }}</td>
+                  <td>{{ i.profesor + (i.tutor ? (' (Tutor: ' + i.tutor + ')') : '') }}</td>
                   <td>{{ i.publicacion }}</td>
                 </tr>
               </tbody>
