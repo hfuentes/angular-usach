@@ -2,8 +2,10 @@
   <div class="container">
     <div class="row">
       <div class="col-12 text-center mb-4">
-        <span class="address">UNIVERSIDAD DE SANTIAGO DE CHILE. AVENIDA LIBERTADOR BERNARDO O'HIGGINS N° 3363, ESTACIÓN CENTRAL, SANTIAGO, CHILE.</span>
-        <span class="address font-weight-bold">OFICINA DE INFORMACIONES, RECLAMOS Y SUGERENCIAS (OIRS)  |  (562) 2 718 49 00</span>
+        <span class="address">UNIVERSIDAD DE SANTIAGO DE CHILE. AVENIDA LIBERTADOR BERNARDO O'HIGGINS N° 3363, ESTACIÓN
+          CENTRAL, SANTIAGO, CHILE.</span>
+        <span class="address font-weight-bold">OFICINA DE INFORMACIONES, RECLAMOS Y SUGERENCIAS (OIRS) | (562) 2 718 49
+          00</span>
       </div>
       <div class="col-12 col-lg-6">
         <div class="cna text-left">
@@ -16,24 +18,29 @@
       <div class="col-12 col-lg-6">
         <!--OPCIONALES DEPENDE DEL PROGRAMA-->
         <div class="rrss">
-          <div style="cursor: pointer;" [title]="footerData.facebook" (click)="goExternal('facebook')">
+          <div style="cursor: pointer;" *ngIf="footerData.facebook" [title]="footerData.facebook"
+            (click)="goExternal('facebook')">
             <img src="../../../assets/fb.png">
             <span class="d-none d-lg-block">facebook</span>
           </div>
-          <div style="cursor: pointer;">
-            <img src="../../../assets/tw.png" [title]="footerData.twitter" (click)="goExternal('twitter')">
+          <div style="cursor: pointer;" *ngIf="footerData.twitter" [title]="footerData.twitter"
+            (click)="goExternal('twitter')">
+            <img src="../../../assets/tw.png">
             <span class="d-none d-lg-block">twitter</span>
           </div>
-          <div style="cursor: pointer;">
+          <div style="cursor: pointer;" *ngIf="footerData.youtube" [title]="footerData.youtube"
+            (click)="goExternal('youtube')">
             <img src="../../../assets/yout.png">
             <span class="d-none d-lg-block">youtube</span>
           </div>
-          <div style="cursor: pointer;">
+          <div style="cursor: pointer;" *ngIf="footerData.linkedin" [title]="footerData.linkedin"
+            (click)="goExternal('linkedin')">
             <img src="../../../assets/linkd.png">
             <span class="d-none d-lg-block">linkedin</span>
           </div>
-          <div style="cursor: pointer;">
-            <img src="../../../assets/ints.png" [title]="footerData.instagram" (click)="goExternal('instagram')">
+          <div style="cursor: pointer;" *ngIf="footerData.instagram" [title]="footerData.instagram"
+            (click)="goExternal('instagram')">
+            <img src="../../../assets/ints.png">
             <span class="d-none d-lg-block">instagram</span>
           </div>
         </div>

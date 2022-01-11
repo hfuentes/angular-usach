@@ -13,6 +13,8 @@ export class FooterComponent implements OnInit {
     facebook: string,
     twitter: string,
     instagram: string,
+    youtube: string,
+    linkedin: string
   };
 
   constructor(
