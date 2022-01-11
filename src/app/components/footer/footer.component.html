@@ -9,7 +9,7 @@
       </div>
       <div class="col-12 col-lg-6">
         <div class="cna text-left">
-          <img src="../../../assets/lcna_horizontal_2.png">
+          <img [src]="footerData.cna">
           <div class="pl-1 text-white foot-links">
             <a *ngFor="let i of links" [href]="i.url">{{ i.content }}<br></a>
           </div>
