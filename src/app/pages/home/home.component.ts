@@ -3,6 +3,7 @@ import { WindowRef } from '../../services/window.service';
 import Swipe from 'swipejs';
 import { ContentService } from 'src/app/services/content.service';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-home',
@@ -47,7 +48,8 @@ export class HomeComponent implements OnInit {
   constructor(
     private winRef: WindowRef,
     private content: ContentService,
-    private sanitizer: DomSanitizer
+    private sanitizer: DomSanitizer,
+    private spinner: NgxSpinnerService
   ) { }
 
   ngOnInit(): void {
@@ -59,10 +61,11 @@ export class HomeComponent implements OnInit {
       disableScroll: false,
       stopPropagation: false,
     });
+    this.spinner.show();
     this.content.getHomeData().then(data => {
       this.homeData = data;
       this.video = this.sanitizer.bypassSecurityTrustResourceUrl(this.homeData.video);
-    }).catch(err => console.error(err));
+    }).catch(err => console.error(err)).finally(() => this.spinner.hide());
   }
 
   prevSlide = () => {

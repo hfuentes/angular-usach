@@ -1,10 +1,11 @@
 <div class="image-with-text" style="margin-top: .7em !important;">
-  <div class="row" style="cursor: pointer;" [routerLink]="['/noticias/' + noticia.id]">
+  <div class="row" style="cursor: pointer;" [routerLink]="['/noticias/' + (noticia && noticia.id ? noticia.id : '')]">
     <div class="col-4 col-lg-6">
-      <img [src]="noticia.imagen" style="max-height: 4em !important; max-width: 4em;">
+      <img [src]="(noticia && noticia.imagen ? noticia.imagen : '')"
+        style="max-height: 4em !important; max-width: 4em;">
     </div>
     <div class="col-8 col-lg-6 pl-0">
-      <span>{{ noticia.titulo }}</span>
+      <span>{{ (noticia && noticia.titulo ? noticia.titulo : '') }}</span>
     </div>
   </div>
 </div>

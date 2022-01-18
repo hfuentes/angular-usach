@@ -9,7 +9,7 @@
       </div>
       <div class="col-12 col-lg-6">
         <div class="cna text-left">
-          <img [src]="footerData.cna">
+          <img [src]="footerData && footerData.cna ? footerData.cna : ''">
           <div class="pl-1 text-white foot-links">
             <a *ngFor="let i of links" [href]="i.url">{{ i.content }}<br></a>
           </div>
@@ -18,27 +18,27 @@
       <div class="col-12 col-lg-6">
         <!--OPCIONALES DEPENDE DEL PROGRAMA-->
         <div class="rrss">
-          <div style="cursor: pointer;" *ngIf="footerData.facebook" [title]="footerData.facebook"
+          <div style="cursor: pointer;" *ngIf="footerData && footerData.facebook" [title]="footerData.facebook"
             (click)="goExternal('facebook')">
             <img src="../../../assets/fb.png">
             <span class="d-none d-lg-block">facebook</span>
           </div>
-          <div style="cursor: pointer;" *ngIf="footerData.twitter" [title]="footerData.twitter"
+          <div style="cursor: pointer;" *ngIf="footerData && footerData.twitter" [title]="footerData.twitter"
             (click)="goExternal('twitter')">
             <img src="../../../assets/tw.png">
             <span class="d-none d-lg-block">twitter</span>
           </div>
-          <div style="cursor: pointer;" *ngIf="footerData.youtube" [title]="footerData.youtube"
+          <div style="cursor: pointer;" *ngIf="footerData && footerData.youtube" [title]="footerData.youtube"
             (click)="goExternal('youtube')">
             <img src="../../../assets/yout.png">
             <span class="d-none d-lg-block">youtube</span>
           </div>
-          <div style="cursor: pointer;" *ngIf="footerData.linkedin" [title]="footerData.linkedin"
+          <div style="cursor: pointer;" *ngIf="footerData && footerData.linkedin" [title]="footerData.linkedin"
             (click)="goExternal('linkedin')">
             <img src="../../../assets/linkd.png">
             <span class="d-none d-lg-block">linkedin</span>
           </div>
-          <div style="cursor: pointer;" *ngIf="footerData.instagram" [title]="footerData.instagram"
+          <div style="cursor: pointer;" *ngIf="footerData && footerData.instagram" [title]="footerData.instagram"
             (click)="goExternal('instagram')">
             <img src="../../../assets/ints.png">
             <span class="d-none d-lg-block">instagram</span>

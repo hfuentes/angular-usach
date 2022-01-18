@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { WindowRef } from '../../services/window.service';
 import { ContentService } from '../../services/content.service';
+import { NgxSpinnerService } from 'ngx-spinner';
 @Component({
   selector: 'app-students',
   templateUrl: './students.component.html',
@@ -19,7 +20,8 @@ export class StudentsComponent implements OnInit {
     private winRef: WindowRef,
     private route: ActivatedRoute,
     private router: Router,
-    private content: ContentService
+    private content: ContentService,
+    private spinner: NgxSpinnerService
   ) { }
 
   ngOnInit(): void {
@@ -27,10 +29,12 @@ export class StudentsComponent implements OnInit {
       this.activeSection = params.activeSection;
     });
     this.winWidth = this.winRef.nativeWindow.innerWidth;
+    this.spinner.show();
     this.content.getEstudiantes()
       .then(data => (this.graduates = data, this.content.getTesis()))
       .then(data => this.thesis = data)
-      .catch(err => console.error(err));
+      .catch(err => console.error(err))
+      .finally(() => this.spinner.hide());
   }
 
   goToNav = (target) => {

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { WindowRef } from '../../services/window.service';
 import { ContentService } from '../../services/content.service';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-program',
@@ -21,17 +22,19 @@ export class ProgramComponent implements OnInit {
     private winRef: WindowRef,
     private route: ActivatedRoute,
     private router: Router,
-    private content: ContentService
+    private content: ContentService,
+    private spinner: NgxSpinnerService
   ) { }
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       this.activeSection = params.activeSection;
     });
+    this.spinner.show();
     this.content.getProgramaData().then(data => {
       this.programaData = data;
       this.activeContent = this.programaData[this.activeSection];
-    }).catch(err => console.error(err));
+    }).catch(err => console.error(err)).finally(() => this.spinner.hide());
     this.winWidth = this.winRef.nativeWindow.innerWidth;
     this.activeFile = this.content.getProgramFile(this.activeSection);
   }

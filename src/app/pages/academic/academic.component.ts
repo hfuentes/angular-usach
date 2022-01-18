@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { WindowRef } from '../../services/window.service';
 import { ContentService } from '../../services/content.service';
 import { Router } from '@angular/router';
+import { NgxSpinnerComponent, NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-academic',
@@ -16,17 +17,18 @@ export class AcademicComponent implements OnInit {
   constructor(
     private winRef: WindowRef,
     private content: ContentService,
-    private router: Router
+    private router: Router,
+    private spinner: NgxSpinnerService
   ) { }
 
   ngOnInit(): void {
     this.winWidth = this.winRef.nativeWindow.innerWidth;
-    // this.academics = this.content.getAcademicsContent(10);
+    this.spinner.show();
     this.content.getAcademicos().then(data => {
       this.academics = data;
     }).catch(err => {
       console.error(err);
-    });
+    }).finally(() => this.spinner.hide());
   }
 
   goToAcademic(id: number): void {

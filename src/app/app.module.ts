@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -22,6 +22,7 @@ import { NewsComponent } from './pages/news/news.component';
 import { AcademicDetailsComponent } from './pages/academic-details/academic-details.component';
 import { DownloadPdfComponent } from './components/download-pdf/download-pdf.component';
 import { NewsDetailsComponent } from './pages/news-details/news-details.component';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 @NgModule({
   declarations: [
@@ -46,8 +47,10 @@ import { NewsDetailsComponent } from './pages/news-details/news-details.componen
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxSpinnerModule
   ],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [WindowRef],
   bootstrap: [AppComponent]
 })

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { WindowRef } from '../../services/window.service';
 import { ContentService } from '../../services/content.service';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-news',
@@ -14,16 +15,17 @@ export class NewsComponent implements OnInit {
 
   constructor(
     private winRef: WindowRef,
-    private content: ContentService
+    private content: ContentService,
+    private spinner: NgxSpinnerService
   ) { }
 
   ngOnInit(): void {
     this.winWidth = this.winRef.nativeWindow.innerWidth;
-    this.news = this.content.getNewsContent().then(data => {
-      this.news = data;
-    }).catch(err => {
-      console.error(err);
-    });
+    this.spinner.show();
+    this.news = this.content.getNewsContent()
+      .then(data => this.news = data)
+      .catch(err => console.error(err))
+      .finally(() => this.spinner.hide());;
   }
 
 }
