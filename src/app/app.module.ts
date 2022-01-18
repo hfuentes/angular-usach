@@ -23,6 +23,8 @@ import { AcademicDetailsComponent } from './pages/academic-details/academic-deta
 import { DownloadPdfComponent } from './components/download-pdf/download-pdf.component';
 import { NewsDetailsComponent } from './pages/news-details/news-details.component';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { GalleryComponent } from './pages/gallery/gallery.component';
+import {IvyGalleryModule} from 'angular-gallery';
 
 @NgModule({
   declarations: [
@@ -43,12 +45,14 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     AcademicDetailsComponent,
     DownloadPdfComponent,
     NewsDetailsComponent,
+    GalleryComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    IvyGalleryModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [WindowRef],

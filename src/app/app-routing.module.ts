@@ -10,6 +10,7 @@ import { ResearchComponent } from '../app/pages/research/research.component';
 import { NewsComponent } from './pages/news/news.component';
 import { AcademicDetailsComponent } from './pages/academic-details/academic-details.component';
 import { NewsDetailsComponent } from './pages/news-details/news-details.component';
+import { GalleryComponent } from './pages/gallery/gallery.component';
 
 const routes: Routes = [
   {
@@ -51,6 +52,10 @@ const routes: Routes = [
   {
     path: 'cuerpo-academico/:id',
     component: AcademicDetailsComponent
+  },
+  {
+    path: 'galeria',
+    component: GalleryComponent
   }
 ];
 
