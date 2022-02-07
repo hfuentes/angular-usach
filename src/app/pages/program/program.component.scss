@@ -40,9 +40,6 @@
       text-decoration: underline;
     }
   }
-  .active-content {
-
-  }
 }
 .download-info {
   display: flex;
@@ -78,6 +75,10 @@
     flex-direction: column;
     align-items: center;
     font-size: .8rem;
+  }
+  .img-select {
+    height: 28px !important;
+    width: 28px !important;
   }
 }
 

@@ -16,7 +16,25 @@ export class ProgramComponent implements OnInit {
   program = null;
   winWidth = null;
   contact = null;
-  programaData = null;
+  programaData: {
+    jornada: string,
+    jornadaGlosa: string,
+    correo: string,
+    modalidad: string,
+    caracter: string,
+    dedicacion: string,
+    modalidadGlosa: string,
+    caracterGlosa: string,
+    dedicacionGlosa: string,
+    ahno: string,
+    postulaciones: string,
+    clases: string,
+    valor: string,
+    subvalor: string,
+    pago: string,
+    telefono: string,
+    url: string
+  } = null;
 
   constructor(
     private winRef: WindowRef,
@@ -33,10 +51,33 @@ export class ProgramComponent implements OnInit {
     this.spinner.show();
     this.content.getProgramaData().then(data => {
       this.programaData = data;
+      this.transformAmenities();
       this.activeContent = this.programaData[this.activeSection];
     }).catch(err => console.error(err)).finally(() => this.spinner.hide());
     this.winWidth = this.winRef.nativeWindow.innerWidth;
     this.activeFile = this.content.getProgramFile(this.activeSection);
+  }
+
+  transformAmenities(): void {
+    if (this.programaData) {
+      switch (this.programaData.jornada) {
+        case 'vespertino': this.programaData.jornadaGlosa = 'Vespertino'; break;
+        case 'diurno': this.programaData.jornadaGlosa = 'Diurno'; break;
+      }
+      switch (this.programaData.modalidad) {
+        case 'presencial': this.programaData.modalidadGlosa = 'Presencial'; break;
+        case 'online': this.programaData.modalidadGlosa = 'Online'; break;
+        case 'semipresencial': this.programaData.modalidadGlosa = 'Semipresencial'; break;
+      }
+      switch (this.programaData.caracter) {
+        case 'programa_academico': this.programaData.caracterGlosa = 'Académico'; break;
+        case 'programa_profesional': this.programaData.caracterGlosa = 'Profesional'; break;
+      }
+      switch (this.programaData.dedicacion) {
+        case 'completa': this.programaData.dedicacionGlosa = 'Completa'; break;
+        case 'parcial': this.programaData.dedicacionGlosa = 'Parcial'; break;
+      }
+    }
   }
 
   goToNav = (target) => {

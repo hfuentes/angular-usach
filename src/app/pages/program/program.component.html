@@ -95,36 +95,25 @@
         <div class="amenities gray-2 flex-wrap">
           <!-- [ngClass]="{'pr-0': $even, 'pl-0': $even"}-->
           <div class="col-6 pr-0 d-flex flex-column align-items-center justify-content-center">
-            <svg width="1.8em" height="1.8em" viewBox="0 0 16 16" class="bi bi-moon black-txt" fill="currentColor"
-              xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd"
-                d="M14.53 10.53a7 7 0 0 1-9.058-9.058A7.003 7.003 0 0 0 8 15a7.002 7.002 0 0 0 6.53-4.47z" />
-            </svg>
-            <span class="text-uppercase black-txt my-2 font-small text-center">Jornada<br><b>{{ programaData.jornada }}</b></span>
+            <img *ngIf="programaData.jornada == 'vespertino'" src="../../../assets/programa/jornada_vespertina.png" class="img-select">
+            <img *ngIf="programaData.jornada == 'diurno'" src="../../../assets/programa/jornada_diurna.png" class="img-select">
+            <span class="text-uppercase black-txt my-2 font-small text-center">Jornada<br><b>{{ programaData.jornadaGlosa }}</b></span>
           </div>
           <div class="col-6 pl-0 d-flex flex-column align-items-center justify-content-center">
-            <svg width="1.8em" height="1.8em" viewBox="0 0 16 16" class="bi bi-moon black-txt" fill="currentColor"
-              xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd"
-                d="M14.53 10.53a7 7 0 0 1-9.058-9.058A7.003 7.003 0 0 0 8 15a7.002 7.002 0 0 0 6.53-4.47z" />
-            </svg>
-            <span class="text-uppercase black-txt my-2 font-small text-center">Modalidad<br><b>{{ programaData.modalidad }}</b></span>
+            <img *ngIf="programaData.modalidad == 'online'" src="../../../assets/programa/modalidad_online.png" class="img-select">
+            <img *ngIf="programaData.modalidad == 'presencial'" src="../../../assets/programa/modalidad_presencial.png" class="img-select">
+            <img *ngIf="programaData.modalidad == 'semipresencial'" src="../../../assets/programa/modalidad_semipresencial.png" class="img-select">
+            <span class="text-uppercase black-txt my-2 font-small text-center">Modalidad<br><b>{{ programaData.modalidadGlosa }}</b></span>
           </div>
           <div class="col-6 pr-0 d-flex flex-column align-items-center justify-content-center">
-            <svg width="1.8em" height="1.8em" viewBox="0 0 16 16" class="bi bi-moon black-txt" fill="currentColor"
-              xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd"
-                d="M14.53 10.53a7 7 0 0 1-9.058-9.058A7.003 7.003 0 0 0 8 15a7.002 7.002 0 0 0 6.53-4.47z" />
-            </svg>
-            <span class="text-uppercase black-txt my-2 font-small text-center">Caracter<br><b>{{ programaData.caracter }}</b></span>
+            <img *ngIf="programaData.caracter == 'programa_academico'" src="../../../assets/programa/caracter_programa_academico.png" class="img-select">
+            <img *ngIf="programaData.caracter == 'programa_profesional'" src="../../../assets/programa/caracter_programa_profesional.png" class="img-select">
+            <span class="text-uppercase black-txt my-2 font-small text-center">Caracter<br><b>{{ programaData.caracterGlosa }}</b></span>
           </div>
           <div class="col-6 pl-0 d-flex flex-column align-items-center justify-content-center">
-            <svg width="1.8em" height="1.8em" viewBox="0 0 16 16" class="bi bi-moon black-txt" fill="currentColor"
-              xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd"
-                d="M14.53 10.53a7 7 0 0 1-9.058-9.058A7.003 7.003 0 0 0 8 15a7.002 7.002 0 0 0 6.53-4.47z" />
-            </svg>
-            <span class="text-uppercase black-txt my-2 font-small text-center">Dedicación<br><b>{{ programaData.dedicacion }}</b></span>
+            <img *ngIf="programaData.dedicacion == 'completa'" src="../../../assets/programa/dedicacion_completa.png" class="img-select">
+            <img *ngIf="programaData.dedicacion == 'parcial'" src="../../../assets/programa/dedicacion_parcial.png" class="img-select">
+            <span class="text-uppercase black-txt my-2 font-small text-center">Dedicación<br><b>{{ programaData.dedicacionGlosa }}</b></span>
           </div>
         </div>
         <div class="amenities p-2 flex-column align-items-center gray-1">
